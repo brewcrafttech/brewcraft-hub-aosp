@@ -20,23 +20,16 @@
     <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/packages/apps/TV"/>
     <remove-project name="platform/packages/modules/Wifi"/>
+    <remove-project name="platform/packages/modules/Connectivity"/>
     <remove-project name="platform/external/wpa_supplicant_8"/>
     <remove-project name="platform/packages/providers/MediaProvider"/>
-    <!-- Google-singed Mainline prebuilt module remove-projects !-->
-    <remove-project name="platform/prebuilts/module_sdk/art"/>
-    <remove-project name="platform/prebuilts/module_sdk/AdServices"/>
-    <remove-project name="platform/prebuilts/module_sdk/AppSearch"/>
-    <remove-project name="platform/prebuilts/module_sdk/Bluetooth"/>
-    <remove-project name="platform/prebuilts/module_sdk/conscrypt"/>
-    <remove-project name="platform/prebuilts/module_sdk/Connectivity"/>
-    <remove-project name="platform/prebuilts/module_sdk/IPsec"/>
-    <remove-project name="platform/prebuilts/module_sdk/Media"/>
-    <remove-project name="platform/prebuilts/module_sdk/MediaProvider"/>
-    <remove-project name="platform/prebuilts/module_sdk/OnDevicePersonalization"/>
-    <remove-project name="platform/prebuilts/module_sdk/Permission"/>
-    <remove-project name="platform/prebuilts/module_sdk/Scheduling"/>
-    <remove-project name="platform/prebuilts/module_sdk/SdkExtensions"/>
-    <remove-project name="platform/prebuilts/module_sdk/StatsD"/>
-    <remove-project name="platform/prebuilts/module_sdk/Uwb"/>
-    <remove-project name="platform/prebuilts/module_sdk/Wifi"/>
+    <remove-project name="platform/packages/apps/Settings"/>
+    <remove-project name="platform/packages/apps/Gallery2"/>
+    <remove-project name="platform/packages/apps/Music"/>
+    <remove-project name="platform/packages/apps/Calendar"/>
+    <remove-project name="platform/packages/services/Telephony"/>
+    <remove-project name="platform/packages/apps/Camera2"/>
+    <remove-project name="platform/system/media"/>
+    <remove-project name="platform/packages/apps/Launcher3"/>
+    <remove-project name="platform/packages/modules/Bluetooth"/>
 </manifest>
