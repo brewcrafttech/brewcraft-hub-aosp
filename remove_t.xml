@@ -17,6 +17,7 @@
     <remove-project name="platform/hardware/libhardware"/>
     <remove-project name="platform/hardware/interfaces"/>
     <remove-project name="platform/hardware/broadcom/libbt"/>
+    <remove-project name="platform/hardware/broadcom/wlan" />
     <remove-project name="platform/frameworks/opt/net/wifi"/>
     <remove-project name="platform/packages/apps/TV"/>
     <remove-project name="platform/packages/modules/Wifi"/>
@@ -32,4 +33,12 @@
     <remove-project name="platform/system/media"/>
     <remove-project name="platform/packages/apps/Launcher3"/>
     <remove-project name="platform/packages/modules/Bluetooth"/>
+
+    <!-- Security Patch -->
+    <remove-project name="platform/packages/providers/TelephonyProvider"/>
+    <remove-project name="platform/art"/>
+    <remove-project name="platform/external/dtc"/>
+    <remove-project name="platform/frameworks/minikin"/>
+    <remove-project name="platform/packages/apps/EmergencyInfo"/>
+    <remove-project name="platform/packages/services/Telecomm"/>
 </manifest>

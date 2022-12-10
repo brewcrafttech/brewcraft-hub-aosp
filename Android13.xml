@@ -12,4 +12,5 @@
 
   <include name="include/rk_modules_repository.xml" />
   <include name="include/rk3588_repository.xml" />
+  <include name="include/rk356x_repository.xml" />
 </manifest>
