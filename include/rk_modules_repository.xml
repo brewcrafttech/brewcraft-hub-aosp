@@ -97,6 +97,7 @@
       <linkfile src="configs/non_debuggable.config" dest="kernel-5.10/kernel/configs/non_debuggable.config"/>
       <linkfile src="configs/pcie_wifi.config" dest="kernel-5.10/kernel/configs/pcie_wifi.config"/>
       <linkfile src="configs/rk356x.config" dest="kernel-5.10/kernel/configs/rk356x.config"/>
+      <linkfile src="configs/rk3326.config" dest="kernel-5.10/kernel/configs/rk3326.config"/>
   </project>
   <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" remote="rk" revision="refs/tags/android-13.0-mid-rkr3"/>
   <project path="hardware/rockchip/libbaseparameter" name="rk/hardware/rk29/libbaseparameter" remote="rk" revision="refs/tags/android-13.0-mid-rkr3"/>
