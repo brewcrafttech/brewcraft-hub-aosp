@@ -7,6 +7,8 @@
     <remove-project name="platform/external/libdrm"/>
     <remove-project name="platform/external/speex"/>
     <remove-project name="platform/external/tinyalsa"/>
+    <remove-project name="platform/external/skia"/>
+    <remove-project name="platform/external/ppp"/>
     <remove-project name="platform/system/core"/>
     <remove-project name="platform/system/vold"/>
     <remove-project name="device/generic/car" />
