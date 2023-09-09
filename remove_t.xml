@@ -38,4 +38,5 @@
     <remove-project name="platform/packages/apps/TvSettings"/>
     <remove-project name="platform/frameworks/ex"/>
     <remove-project name="platform/build/blueprint"/>
+    <remove-project name="platform/external/e2fsprogs"/>
 </manifest>
