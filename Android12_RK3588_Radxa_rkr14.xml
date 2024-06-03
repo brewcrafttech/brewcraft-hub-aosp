@@ -39,6 +39,7 @@
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/hardware/ril" />
+  <remove-project name="platform/external/wpa_supplicant_8" />
   <remove-project name="rk/hardware/rk29/camera_v3" />
   <remove-project name="external/camera_engine_rkaiq" />
   <remove-project name="platform/packages/apps/Launcher3" />
@@ -96,6 +97,7 @@
   <project name="platform/radxa" path="radxa" remote="rk" revision="7f92311bbcb63aef7a98c63e80822de6d324bd42" upstream="refs/tags/android12-radxa-rkr14.2" />
   <project groups="pdk" name="platform/hardware/interfaces" path="hardware/interfaces" revision="8b16b689eeb2dc2938cfb12a0e06078d7e35217e" upstream="refs/tags/android12-radxa-rkr14.2"/>
   <project groups="pdk" name="platform/hardware/ril" path="hardware/ril" revision="94038d636c58dc8438b8e929a567a761ecbaa89b" upstream="refs/tags/android12-radxa-rkr14.2"/>
+  <project groups="pdk" name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" revision="66268b9bfa7ac98810b819f7a0d7a68c9bc50038" upstream="refs/tags/android12-radxa-rkr14.3"/>
   <project name="rk/hardware/rk29/camera_v3" path="hardware/rockchip/camera/" revision="9b5ad4dba7c7e09ecd382cef83196934a63de834" upstream="refs/tags/android12-radxa-rkr14.2"/>
   <project name="external/camera_engine_rkaiq" path="external/camera_engine_rkaiq" revision="efdec854be3e126ffb9dfcb31139b0d80d6e25ed" upstream="refs/tags/android12-radxa-rkr14.2"/>
   <project groups="pdk-fs" name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" revision="aeccc83c1d56c9bbb6eb628568a864c548573e45" upstream="refs/tags/android12-radxa-rkr14.2"/>
