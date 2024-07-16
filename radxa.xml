@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="aosp" fetch="."/>
+  <remote name="rk" fetch="."/>
+  <remote name="rk29" fetch="."/>
+  
+  <default remote="aosp" revision="master" sync-j="4"/>
+  
+  <project name="RKTools" remote="rk" revision="master"/>
+  <project name="device/amlogic/yukawa" revision="master" groups="device,yukawa,pdk"/>
+  <project name="device/common" revision="master" groups="pdk-cw-fs,pdk"/>
+  <project name="device/generic/arm64" revision="master" groups="pdk"/>
+  <project name="device/generic/armv7-a-neon" revision="master" groups="pdk"/>
+  <project name="device/generic/art" revision="master" groups="pdk"/>
+  <project name="device/generic/common" revision="master" groups="pdk"/>
+  <project name="device/generic/goldfish" revision="master" groups="pdk"/>
+  <project name="device/generic/goldfish-opengl" revision="master" groups="pdk"/>
+  <project name="device/generic/mini-emulator-arm64" revision="master" groups="pdk"/>
+  <project name="device/generic/mini-emulator-armv7-a-neon" revision="master" groups="pdk"/>
+  <project name="device/generic/mini-emulator-x86" revision="master" groups="pdk"/>
+  <project name="device/generic/mini-emulator-x86_64" revision="master" groups="pdk"/>
+  <project name="device/generic/opengl-transport" revision="master" groups="pdk"/>
+  <project name="device/generic/qemu" revision="master" groups="pdk"/>
+  <project name="device/generic/trusty" revision="master" groups="pdk"/>
+  <project name="device/generic/uml" revision="master" groups="device,pdk"/>
+  <project name="device/generic/x86" revision="master" groups="pdk"/>
+  <project name="device/generic/x86_64" revision="master" groups="pdk"/>
+  <project name="device/google/atv" revision="master" groups="device,broadcom_pdk,generic_fs,pdk"/>
+  <project name="device/google/contexthub" revision="master" groups="device,pdk"/>
+  <project name="device/google/cuttlefish" revision="master" groups="device,pdk"/>
+  <project name="device/google/gs-common" revision="master" groups="device,slider,bluejay,pdk-gs-arm"/>
+  <project name="device/google/gs101" revision="master" groups="device,slider,bluejay,pdk-gs-arm"/>
+  <project name="device/google/gs101-sepolicy" revision="master" groups="device,slider,bluejay,pdk-gs-arm"/>
+  <project name="device/google/raviole" revision="master" groups="device,slider,pdk-gs-arm"/>
+  <project name="device/google/vrservices" revision="master" groups="pdk"/>
+  <project name="device/google_car" revision="master" groups="pdk"/>
+  <project name="device/linaro/hikey" revision="master" groups="device,hikey,pdk"/>
+  <project name="device/sample" revision="master" groups="pdk"/>
+  <project name="device/ti/beagle-x15" path="device/ti/beagle_x15" revision="master" groups="device,beagle_x15,pdk"/>
+  <project name="docs/android" path="RKDocs/android" remote="rk" revision="master"/>
+  <project name="docs/common" path="RKDocs/common" remote="rk" revision="master"/>
+  <project name="external/camera_engine_rkaiq" remote="rk" revision="master"/>
+  <project name="external/wifi_driver" remote="rk" revision="master"/>
+  <project name="kernel/configs" revision="master" groups="vts,pdk"/>
+  <project name="kernel/prebuilts/5.10/arm64" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="kernel/tests" revision="master" groups="vts,pdk"/>
+  <project name="linux/linux-rga" path="hardware/rockchip/librga" remote="rk29" revision="master"/>
+  <project name="platform/art" path="art" revision="master" groups="pdk"/>
+  <project name="platform/bionic" path="bionic" revision="master" groups="pdk"/>
+  <project name="platform/bootable/libbootloader" path="bootable/libbootloader" revision="master" groups="vts,pdk"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery" revision="master" groups="pdk"/>
+  <project name="platform/bootable/mtd_utils" path="bootable/recovery/mtdutils" remote="rk" revision="master"/>
+  <project name="platform/bootable/rk_update" path="bootable/recovery/rkupdate" remote="rk" revision="master"/>
+  <project name="platform/bootable/rk_utility" path="bootable/recovery/rkutility" remote="rk" revision="master"/>
+  <project name="platform/build" path="build/make" revision="master" groups="pdk">
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
+    <linkfile src="core" dest="build/core"/>
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
+    <linkfile src="target" dest="build/target"/>
+    <linkfile src="tools" dest="build/tools"/>
+  </project>
+  <project name="platform/bazel" path="build/bazel" revision="master" groups="pdk">
+    <linkfile src="bazel.WORKSPACE" dest="WORKSPACE"/>
+    <linkfile src="bazel.sh" dest="tools/bazel"/>
+    <linkfile src="bazel.BUILD" dest="BUILD"/>
+  </project>
+  <project name="platform/bazel_common_rules" path="build/bazel_common_rules" revision="master" groups="pdk"/>
+  <project name="platform/blueprint" path="build/blueprint" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/pesto" path="build/pesto" revision="master" groups="pdk"/>
+  <project name="platform/soong" path="build/soong" revision="master">
+    <linkfile src="root.bp" dest="Android.bp"/>
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash"/>
+  </project>
+  <project name="platform/cts" path="cts" revision="master" groups="cts,pdk-cw-fs,pdk-fs"/>
+  <project name="platform/dalvik" path="dalvik" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/developers/build" path="developers/build" revision="master" groups="developers,pdk"/>
+  <project name="platform/developers/demos" path="developers/demos" revision="master" groups="developers"/>
+  <project name="platform/developers/samples/android" path="developers/samples/android" revision="master" groups="developers"/>
+  <project name="platform/development" path="development" revision="master" groups="developers,pdk-cw-fs,pdk-fs"/>
+  <project name="platform/external/ComputeLibrary" path="external/ComputeLibrary" revision="master" groups="pdk-lassen,pdk-gs-arm"/>
+  <project name="platform/external/FP16" path="external/FP16" revision="master" groups="pdk"/>
+  <project name="platform/external/FXdiv" path="external/FXdiv" revision="master" groups="pdk"/>
+  <project name="platform/external/ImageMagick" path="external/ImageMagick" revision="master" groups="pdk"/>
+  <project name="platform/external/OpenCL-CTS" path="external/OpenCL-CTS" revision="master"/>
+  <project name="platform/external/OpenCSD" path="external/OpenCSD" revision="master" groups="pdk"/>
+  <project name="platform/external/Reactive-Extensions/RxCpp" path="external/Reactive-Extensions/RxCpp" revision="master" groups="pdk"/>
+  <project name="platform/external/TestParameterInjector" path="external/TestParameterInjector" revision="master" groups="pdk"/>
+  <project name="platform/external/XNNPACK" path="external/XNNPACK" revision="master" groups="pdk"/>
+  <project name="platform/external/aac" path="external/aac" revision="master" groups="pdk"/>
+  <project name="platform/external/abseil-cpp" path="external/abseil-cpp" revision="master" groups="pdk"/>
+  <project name="platform/external/android-clat" path="external/android-clat" revision="master" groups="pdk"/>
+  <project name="platform/external/android-nn-driver" path="external/android-nn-driver" revision="master" groups="pdk-lassen,pdk-gs-arm"/>
+  <project name="platform/external/androidplot" path="external/androidplot" revision="master" groups="pdk"/>
+  <project name="platform/external/angle" path="external/angle" revision="master" groups="pdk"/>
+  <project name="platform/external/ant-glob" path="external/ant-glob" revision="master" groups="pdk"/>
+  <project name="platform/external/antlr" path="external/antlr" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-commons-bcel" path="external/apache-commons-bcel" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-commons-compress" path="external/apache-commons-compress" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-commons-math" path="external/apache-commons-math" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-harmony" path="external/apache-harmony" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-http" path="external/apache-http" revision="master" groups="pdk"/>
+  <project name="platform/external/apache-xml" path="external/apache-xml" revision="master" groups="pdk"/>
+  <project name="platform/external/arm-neon-tests" path="external/arm-neon-tests" revision="master" groups="vendor"/>
+  <project name="platform/external/arm-optimized-routines" path="external/arm-optimized-routines" revision="master" groups="pdk"/>
+  <project name="platform/external/arm-trusted-firmware" path="external/arm-trusted-firmware" revision="master" groups="pdk"/>
+  <project name="platform/external/armnn" path="external/armnn" revision="master" groups="pdk-lassen,pdk-gs-arm"/>
+  <project name="platform/external/auto" path="external/auto" revision="master" groups="pdk"/>
+  <project name="platform/external/autotest" path="external/autotest" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/avb" path="external/avb" revision="master" groups="pdk"/>
+  <project name="platform/external/bazel-skylib" path="external/bazel-skylib" revision="master" groups="pdk"/>
+  <project name="platform/external/bazelbuild-rules_android" path="external/bazelbuild-rules_android" revision="master" groups="pdk"/>
+  <project name="platform/external/bc" path="external/bc" revision="master" groups="pdk"/>
+  <project name="platform/external/bcc" path="external/bcc" revision="master" groups="pdk"/>
+  <project name="platform/external/blktrace" path="external/blktrace" revision="master" groups="pdk"/>
+  <project name="platform/external/boringssl" path="external/boringssl" revision="master" groups="pdk"/>
+  <project name="platform/external/bouncycastle" path="external/bouncycastle" revision="master" groups="pdk"/>
+  <project name="platform/external/bpftool" path="external/bpftool" revision="master" groups="pdk"/>
+  <project name="platform/external/brotli" path="external/brotli" revision="master" groups="pdk"/>
+  <project name="platform/external/bsdiff" path="external/bsdiff" revision="master" groups="pdk"/>
+  <project name="platform/external/bzip2" path="external/bzip2" revision="master" groups="pdk"/>
+  <project name="platform/external/caliper" path="external/caliper" revision="master" groups="pdk"/>
+  <project name="platform/external/capstone" path="external/capstone" revision="master" groups="pdk"/>
+  <project name="platform/external/catch2" path="external/catch2" revision="master" groups="pdk"/>
+  <project name="platform/external/cblas" path="external/cblas" revision="master" groups="pdk"/>
+  <project name="platform/external/cbor-java" path="external/cbor-java" revision="master" groups="pdk"/>
+  <project name="platform/external/chromium-trace" path="external/chromium-trace" revision="master" groups="pdk"/>
+  <project name="platform/external/chromium-webview" path="external/chromium-webview" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/external/clang" path="external/clang" revision="master" groups="pdk"/>
+  <project name="platform/external/cldr" path="external/cldr" revision="master" groups="pdk"/>
+  <project name="platform/external/cn-cbor" path="external/cn-cbor" revision="master" groups="pdk"/>
+  <project name="platform/external/compiler-rt" path="external/compiler-rt" revision="master" groups="pdk"/>
+  <project name="platform/external/connectedappssdk" path="external/connectedappssdk" revision="master" groups="pdk"/>
+  <project name="platform/external/conscrypt" path="external/conscrypt" revision="master" groups="pdk"/>
+  <project name="platform/external/cpu_features" path="external/cpu_features" revision="master" groups="pdk"/>
+  <project name="platform/external/cpuinfo" path="external/cpuinfo" revision="master" groups="pdk"/>
+  <project name="platform/external/crcalc" path="external/crcalc" revision="master" groups="pdk"/>
+  <project name="platform/external/cros/system_api" path="external/cros/system_api" revision="master" groups="pdk"/>
+  <project name="platform/external/crosvm" path="external/crosvm" revision="master" groups="pdk"/>
+  <project name="platform/external/curl" path="external/curl" revision="master" groups="pdk"/>
+  <project name="platform/external/dagger2" path="external/dagger2" revision="master" groups="pdk"/>
+  <project name="platform/external/deqp" path="external/deqp" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/deqp-deps/SPIRV-Headers" path="external/deqp-deps/SPIRV-Headers" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/deqp-deps/SPIRV-Tools" path="external/deqp-deps/SPIRV-Tools" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/deqp-deps/amber" path="external/deqp-deps/amber" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/deqp-deps/glslang" path="external/deqp-deps/glslang" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/desugar" path="external/desugar" revision="master" groups="pdk"/>
+  <project name="platform/external/dexmaker" path="external/dexmaker" revision="master" groups="pdk"/>
+  <project name="platform/external/dlmalloc" path="external/dlmalloc" revision="master" groups="pdk"/>
+  <project name="platform/external/dng_sdk" path="external/dng_sdk" revision="master" groups="pdk"/>
+  <project name="platform/external/dnsmasq" path="external/dnsmasq" revision="master" groups="pdk"/>
+  <project name="platform/external/doclava" path="external/doclava" revision="master" groups="pdk"/>
+  <project name="platform/external/dokka" path="external/dokka" revision="master" groups="pdk"/>
+  <project name="platform/external/downloader" path="external/downloader" revision="master" groups="pdk"/>
+  <project name="platform/external/drm_hwcomposer" path="external/drm_hwcomposer" revision="master" groups="drm_hwcomposer,pdk-fs"/>
+  <project name="platform/external/dtc" path="external/dtc" revision="master" groups="pdk"/>
+  <project name="platform/external/dynamic_depth" path="external/dynamic_depth" revision="master" groups="pdk"/>
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/easymock" path="external/easymock" revision="master" groups="pdk"/>
+  <project name="platform/external/eigen" path="external/eigen" revision="master" groups="pdk"/>
+  <project name="platform/external/elfutils" path="external/elfutils" revision="master" groups="pdk"/>
+  <project name="platform/external/emma" path="external/emma" revision="master" groups="pdk"/>
+  <project name="platform/external/erofs-utils" path="external/erofs-utils" revision="master" groups="pdk"/>
+  <project name="platform/external/error_prone" path="external/error_prone" revision="master" groups="pdk"/>
+  <project name="platform/external/escapevelocity" path="external/escapevelocity" revision="master" groups="pdk"/>
+  <project name="platform/external/ethtool" path="external/ethtool" revision="master" groups="pdk"/>
+  <project name="platform/external/exfatprogs" path="external/exfatprogs" revision="master" groups="pdk"/>
+  <project name="platform/external/exoplayer" path="external/exoplayer" revision="master" groups="pdk"/>
+  <project name="platform/external/expat" path="external/expat" revision="master" groups="pdk"/>
+  <project name="platform/external/f2fs-tools" path="external/f2fs-tools" revision="master" groups="pdk"/>
+  <project name="platform/external/fastrpc" path="external/fastrpc" revision="master" groups="pdk"/>
+  <project name="platform/external/fdlibm" path="external/fdlibm" revision="master" groups="pdk"/>
+  <project name="platform/external/fec" path="external/fec" revision="master" groups="pdk"/>
+  <project name="platform/external/fft2d" path="external/fft2d" revision="master" groups="pdk"/>
+  <project name="platform/external/firebase-messaging" path="external/firebase-messaging" revision="master" groups="pdk"/>
+  <project name="platform/external/flac" path="external/flac" revision="master" groups="pdk"/>
+  <project name="platform/external/flatbuffers" path="external/flatbuffers" revision="master" groups="pdk"/>
+  <project name="platform/external/fmtlib" path="external/fmtlib" revision="master" groups="pdk"/>
+  <project name="platform/external/fonttools" path="external/fonttools" revision="master" groups="pdk"/>
+  <project name="platform/external/freetype" path="external/freetype" revision="master" groups="pdk"/>
+  <project name="platform/external/fsck_msdos" path="external/fsck_msdos" revision="master" groups="pdk"/>
+  <project name="platform/external/fsverity-utils" path="external/fsverity-utils" revision="master" groups="pdk"/>
+  <project name="platform/external/gemmlowp" path="external/gemmlowp" revision="master" groups="pdk"/>
+  <project name="platform/external/geojson-jackson" path="external/geojson-jackson" revision="master" groups="pdk"/>
+  <project name="platform/external/geonames" path="external/geonames" revision="master" groups="pdk"/>
+  <project name="platform/external/gflags" path="external/gflags" revision="master" groups="pdk"/>
+  <project name="platform/external/gfxstream-protocols" path="external/gfxstream-protocols" revision="master" groups="pdk"/>
+  <project name="platform/external/giflib" path="external/giflib" revision="master" groups="pdk,qcom_msm8x26"/>
+  <project name="platform/external/glide" path="external/glide" revision="master" groups="pdk"/>
+  <project name="platform/external/go-cmp" path="external/go-cmp" revision="master" groups="pdk"/>
+  <project name="platform/external/golang-protobuf" path="external/golang-protobuf" revision="master" groups="pdk"/>
+  <project name="platform/external/google-benchmark" path="external/google-benchmark" revision="master" groups="pdk"/>
+  <project name="platform/external/google-breakpad" path="external/google-breakpad" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/google-fonts/arbutus-slab" path="external/google-fonts/arbutus-slab" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/arvo" path="external/google-fonts/arvo" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/barlow" path="external/google-fonts/barlow" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/big-shoulders-text" path="external/google-fonts/big-shoulders-text" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/coming-soon" path="external/google-fonts/coming-soon" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/dancing-script" path="external/google-fonts/dancing-script" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/fraunces" path="external/google-fonts/fraunces" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/karla" path="external/google-fonts/karla" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/lato" path="external/google-fonts/lato" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/lustria" path="external/google-fonts/lustria" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/rubik" path="external/google-fonts/rubik" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/source-sans-pro" path="external/google-fonts/source-sans-pro" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fonts/zilla-slab" path="external/google-fonts/zilla-slab" revision="master" groups="pdk"/>
+  <project name="platform/external/google-fruit" path="external/google-fruit" revision="master" groups="pdk"/>
+  <project name="platform/external/google-java-format" path="external/google-java-format" revision="master" groups="pdk"/>
+  <project name="platform/external/google-styleguide" path="external/google-styleguide" revision="master" groups="pdk"/>
+  <project name="platform/external/googletest" path="external/googletest" revision="master" groups="pdk"/>
+  <project name="platform/external/gptfdisk" path="external/gptfdisk" revision="master" groups="pdk"/>
+  <project name="platform/external/grpc-grpc" path="external/grpc-grpc" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/external/grpc-grpc-java" path="external/grpc-grpc-java" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/external/guava" path="external/guava" revision="master" groups="pdk"/>
+  <project name="platform/external/guice" path="external/guice" revision="master" groups="pdk"/>
+  <project name="platform/external/gwp_asan" path="external/gwp_asan" revision="master" groups="pdk"/>
+  <project name="platform/external/hamcrest" path="external/hamcrest" revision="master" groups="pdk"/>
+  <project name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" revision="master" groups="pdk,qcom_msm8x26"/>
+  <project name="platform/external/hyphenation-patterns" path="external/hyphenation-patterns" revision="master" groups="pdk"/>
+  <project name="platform/external/icing" path="external/icing" revision="master" groups="pdk"/>
+  <project name="platform/external/icu" path="external/icu" revision="master" groups="pdk"/>
+  <project name="platform/external/igt-gpu-tools" path="external/igt-gpu-tools" revision="master" groups="pdk"/>
+  <project name="platform/external/image_io" path="external/image_io" revision="master" groups="pdk"/>
+  <project name="platform/external/ims" path="external/ims" revision="master" groups="pdk"/>
+  <project name="platform/external/iperf3" path="external/iperf3" revision="master" groups="pdk"/>
+  <project name="platform/external/iproute2" path="external/iproute2" revision="master" groups="pdk"/>
+  <project name="platform/external/ipsec-tools" path="external/ipsec-tools" revision="master" groups="pdk"/>
+  <project name="platform/external/iptables" path="external/iptables" revision="master" groups="pdk"/>
+  <project name="platform/external/iputils" path="external/iputils" revision="master" groups="pdk"/>
+  <project name="platform/external/iw" path="external/iw" revision="master" groups="pdk"/>
+  <project name="platform/external/jackson-annotations" path="external/jackson-annotations" revision="master" groups="pdk"/>
+  <project name="platform/external/jackson-core" path="external/jackson-core" revision="master" groups="pdk"/>
+  <project name="platform/external/jackson-databind" path="external/jackson-databind" revision="master" groups="pdk"/>
+  <project name="platform/external/jacoco" path="external/jacoco" revision="master" groups="pdk"/>
+  <project name="platform/external/jarjar" path="external/jarjar" revision="master" groups="pdk"/>
+  <project name="platform/external/javaparser" path="external/javaparser" revision="master" groups="pdk"/>
+  <project name="platform/external/javapoet" path="external/javapoet" revision="master" groups="pdk"/>
+  <project name="platform/external/javasqlite" path="external/javasqlite" revision="master" groups="pdk"/>
+  <project name="platform/external/javassist" path="external/javassist" revision="master" groups="pdk"/>
+  <project name="platform/external/jazzer-api" path="external/jazzer-api" revision="master" groups="pdk"/>
+  <project name="platform/external/jcommander" path="external/jcommander" revision="master" groups="pdk"/>
+  <project name="platform/external/jdiff" path="external/jdiff" revision="master" groups="pdk"/>
+  <project name="platform/external/jemalloc_new" path="external/jemalloc_new" revision="master" groups="pdk"/>
+  <project name="platform/external/jimfs" path="external/jimfs" revision="master" groups="pdk"/>
+  <project name="platform/external/jline" path="external/jline" revision="master" groups="pdk,tradefed,pdk-fs"/>
+  <project name="platform/external/jsilver" path="external/jsilver" revision="master" groups="pdk"/>
+  <project name="platform/external/jsmn" path="external/jsmn" revision="master" groups="pdk"/>
+  <project name="platform/external/jsoncpp" path="external/jsoncpp" revision="master" groups="pdk"/>
+  <project name="platform/external/jsr305" path="external/jsr305" revision="master" groups="pdk"/>
+  <project name="platform/external/jsr330" path="external/jsr330" revision="master" groups="pdk"/>
+  <project name="platform/external/junit" path="external/junit" revision="master" groups="pdk"/>
+  <project name="platform/external/junit-params" path="external/junit-params" revision="master" groups="pdk"/>
+  <project name="platform/external/kernel-headers" path="external/kernel-headers" revision="master" groups="pdk"/>
+  <project name="platform/external/kmod" path="external/kmod" revision="master" groups="pdk"/>
+  <project name="platform/external/kotlinc" path="external/kotlinc" revision="master" groups="pdk"/>
+  <project name="platform/external/kotlinx.atomicfu" path="external/kotlinx.atomicfu" revision="master" groups="pdk"/>
+  <project name="platform/external/kotlinx.coroutines" path="external/kotlinx.coroutines" revision="master" groups="pdk"/>
+  <project name="platform/external/kotlinx.metadata" path="external/kotlinx.metadata" revision="master" groups="pdk"/>
+  <project name="platform/external/ksoap2" path="external/ksoap2" revision="master" groups="pdk"/>
+  <project name="platform/external/ktfmt" path="external/ktfmt" revision="master" groups="pdk"/>
+  <project name="platform/external/libabigail" path="external/libabigail" revision="master" groups="pdk"/>
+  <project name="platform/external/libaom" path="external/libaom" revision="master" groups="pdk"/>
+  <project name="platform/external/libavc" path="external/libavc" revision="master" groups="pdk"/>
+  <project name="platform/external/libbackup" path="external/libbackup" revision="master" groups="pdk"/>
+  <project name="platform/external/libbpf" path="external/libbpf" revision="master" groups="pdk"/>
+  <project name="platform/external/libbrillo" path="external/libbrillo" revision="master" groups="pdk"/>
+  <project name="platform/external/libcap" path="external/libcap" revision="master" groups="pdk"/>
+  <project name="platform/external/libcap-ng" path="external/libcap-ng" revision="master" groups="pdk"/>
+  <project name="platform/external/libchrome" path="external/libchrome" revision="master" groups="pdk"/>
+  <project name="platform/external/libchromeos-rs" path="external/libchromeos-rs" revision="master" groups="pdk"/>
+  <project name="platform/external/libconfig" path="external/libconfig" revision="master" groups="pdk"/>
+  <project name="platform/external/libcppbor" path="external/libcppbor" revision="master" groups="pdk"/>
+  <project name="platform/external/libcups" path="external/libcups" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/external/libcxx" path="external/libcxx" revision="master" groups="pdk"/>
+  <project name="platform/external/libcxxabi" path="external/libcxxabi" revision="master" groups="pdk"/>
+  <project name="platform/external/libdivsufsort" path="external/libdivsufsort" revision="master" groups="pdk"/>
+  <project name="platform/external/libdrm" path="external/libdrm" revision="master" groups="pdk"/>
+  <project name="platform/external/libepoxy" path="external/libepoxy" revision="master" groups="pdk"/>
+  <project name="platform/external/libese" path="external/libese" revision="master" groups="pdk"/>
+  <project name="platform/external/libevent" path="external/libevent" revision="master" groups="pdk"/>
+  <project name="platform/external/libexif" path="external/libexif" revision="master" groups="pdk"/>
+  <project name="platform/external/libffi" path="external/libffi" revision="master" groups="pdk"/>
+  <project name="platform/external/libfuse" path="external/libfuse" revision="master" groups="pdk"/>
+  <project name="platform/external/libgav1" path="external/libgav1" revision="master" groups="pdk"/>
+  <project name="platform/external/libgsm" path="external/libgsm" revision="master" groups="pdk"/>
+  <project name="platform/external/libhevc" path="external/libhevc" revision="master" groups="pdk"/>
+  <project name="platform/external/libiio" path="external/libiio" revision="master" groups="pdk"/>
+  <project name="platform/external/libjpeg-turbo" path="external/libjpeg-turbo" revision="master" groups="pdk"/>
+  <project name="platform/external/libkmsxx" path="external/libkmsxx" revision="master" groups="pdk"/>
+  <project name="platform/external/libldac" path="external/libldac" revision="master" groups="pdk"/>
+  <project name="platform/external/libmpeg2" path="external/libmpeg2" revision="master" groups="pdk"/>
+  <project name="platform/external/libnetfilter_conntrack" path="external/libnetfilter_conntrack" revision="master" groups="pdk"/>
+  <project name="platform/external/libnfnetlink" path="external/libnfnetlink" revision="master" groups="pdk"/>
+  <project name="platform/external/libnl" path="external/libnl" revision="master" groups="pdk"/>
+  <project name="platform/external/libogg" path="external/libogg" revision="master" groups="pdk"/>
+  <project name="platform/external/libopus" path="external/libopus" revision="master" groups="pdk"/>
+  <project name="platform/external/libpalmrejection" path="external/libpalmrejection" revision="master" groups="pdk"/>
+  <project name="platform/external/libpcap" path="external/libpcap" revision="master" groups="pdk"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" revision="master" groups="pdk"/>
+  <project name="platform/external/libpng" path="external/libpng" revision="master" groups="pdk"/>
+  <project name="platform/external/libprotobuf-mutator" path="external/libprotobuf-mutator" revision="master" groups="pdk"/>
+  <project name="platform/external/libsrtp2" path="external/libsrtp2" revision="master" groups="pdk"/>
+  <project name="platform/external/libtextclassifier" path="external/libtextclassifier" revision="master" groups="pdk"/>
+  <project name="platform/external/libtraceevent" path="external/libtraceevent" revision="master" groups="pdk"/>
+  <project name="platform/external/libtracefs" path="external/libtracefs" revision="master" groups="pdk"/>
+  <project name="platform/external/liburing" path="external/liburing" revision="master" groups="pdk"/>
+  <project name="platform/external/libusb" path="external/libusb" revision="master" groups="pdk"/>
+  <project name="platform/external/libutf" path="external/libutf" revision="master" groups="pdk"/>
+  <project name="platform/external/libvpx" path="external/libvpx" revision="master" groups="pdk"/>
+  <project name="platform/external/libwebm" path="external/libwebm" revision="master" groups="pdk"/>
+  <project name="platform/external/libwebsockets" path="external/libwebsockets" revision="master" groups="pdk"/>
+  <project name="platform/external/libxaac" path="external/libxaac" revision="master" groups="pdk"/>
+  <project name="platform/external/libxkbcommon" path="external/libxkbcommon" revision="master" groups="pdk"/>
+  <project name="platform/external/libxml2" path="external/libxml2" revision="master" groups="pdk,libxml2"/>
+  <project name="platform/external/libyuv" path="external/libyuv" revision="master" groups="pdk,libyuv"/>
+  <project name="platform/external/linux-kselftest" path="external/linux-kselftest" revision="master" groups="vts,pdk" clone-depth="1"/>
+  <project name="platform/external/llvm" path="external/llvm" revision="master" groups="pdk"/>
+  <project name="platform/external/lmfit" path="external/lmfit" revision="master" groups="pdk"/>
+  <project name="platform/external/lottie" path="external/lottie" revision="master" groups="pdk"/>
+  <project name="platform/external/ltp" path="external/ltp" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/lua" path="external/lua" revision="master" groups="pdk"/>
+  <project name="platform/external/lz4" path="external/lz4" revision="master" groups="pdk"/>
+  <project name="platform/external/lzma" path="external/lzma" revision="master" groups="pdk"/>
+  <project name="platform/external/marisa-trie" path="external/marisa-trie" revision="master" groups="pdk"/>
+  <project name="platform/external/markdown" path="external/markdown" revision="master" groups="pdk"/>
+  <project name="platform/external/mdnsresponder" path="external/mdnsresponder" revision="master" groups="pdk"/>
+  <project name="platform/external/mesa3d" path="external/mesa3d" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/external/mime-support" path="external/mime-support" revision="master" groups="pdk"/>
+  <project name="platform/external/minigbm" path="external/minigbm" revision="master" groups="pdk"/>
+  <project name="platform/external/minijail" path="external/minijail" revision="master" groups="pdk"/>
+  <project name="platform/external/mksh" path="external/mksh" revision="master" groups="pdk"/>
+  <project name="platform/external/mobly-bundled-snippets" path="external/mobly-bundled-snippets" revision="master" groups="pdk"/>
+  <project name="platform/external/mobly-snippet-lib" path="external/mobly-snippet-lib" revision="master" groups="pdk"/>
+  <project name="platform/external/mockftpserver" path="external/mockftpserver" revision="master" groups="pdk"/>
+  <project name="platform/external/mockito" path="external/mockito" revision="master" groups="pdk"/>
+  <project name="platform/external/mockwebserver" path="external/mockwebserver" revision="master" groups="pdk"/>
+  <project name="platform/external/modp_b64" path="external/modp_b64" revision="master" groups="pdk"/>
+  <project name="platform/external/mp4parser" path="external/mp4parser" revision="master" groups="pdk"/>
+  <project name="platform/external/ms-tpm-20-ref" path="external/ms-tpm-20-ref" revision="master" groups="pdk"/>
+  <project name="platform/external/mtools" path="external/mtools" revision="master" groups="pdk"/>
+  <project name="platform/external/mtpd" path="external/mtpd" revision="master" groups="pdk"/>
+  <project name="platform/external/musl" path="external/musl" revision="master" groups="pdk"/>
+  <project name="platform/external/nanohttpd" path="external/nanohttpd" revision="master" groups="pdk"/>
+  <project name="platform/external/nanopb-c" path="external/nanopb-c" revision="master" groups="pdk"/>
+  <project name="platform/external/naver-fonts" path="external/naver-fonts" revision="master" groups="pdk"/>
+  <project name="platform/external/neon_2_sse" path="external/neon_2_sse" revision="master" groups="pdk"/>
+  <project name="platform/external/neven" path="external/neven" revision="master" groups="pdk"/>
+  <project name="platform/external/newfs_msdos" path="external/newfs_msdos" revision="master" groups="pdk"/>
+  <project name="platform/external/nist-pkits" path="external/nist-pkits" revision="master" groups="pdk"/>
+  <project name="platform/external/nist-sip" path="external/nist-sip" revision="master" groups="pdk"/>
+  <project name="platform/external/nos/host/generic" path="external/nos/host/generic" revision="master" groups="pdk"/>
+  <project name="platform/external/noto-fonts" path="external/noto-fonts" revision="master" groups="pdk"/>
+  <project name="platform/external/nullaway" path="external/nullaway" revision="master" groups="pdk"/>
+  <project name="platform/external/oauth" path="external/oauth" revision="master" groups="pdk"/>
+  <project name="platform/external/obex" path="external/obex" revision="master" groups="pdk"/>
+  <project name="platform/external/objenesis" path="external/objenesis" revision="master" groups="pdk"/>
+  <project name="platform/external/oboe" path="external/oboe" revision="master" groups="pdk"/>
+  <project name="platform/external/obstack" path="external/obstack" revision="master" groups="pdk"/>
+  <project name="platform/external/oj-libjdwp" path="external/oj-libjdwp" revision="master" groups="pdk"/>
+  <project name="platform/external/okhttp" path="external/okhttp" revision="master" groups="pdk"/>
+  <project name="platform/external/okhttp4" path="external/okhttp4" revision="master" groups="pdk"/>
+  <project name="platform/external/okio" path="external/okio" revision="master" groups="pdk"/>
+  <project name="platform/external/one-true-awk" path="external/one-true-awk" revision="master" groups="pdk"/>
+  <project name="platform/external/open-dice" path="external/open-dice" revision="master" groups="pdk"/>
+  <project name="platform/external/opencensus-java" path="external/opencensus-java" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/external/openscreen" path="external/openscreen" revision="master" groups="pdk"/>
+  <project name="platform/external/openwrt-prebuilts" path="external/openwrt-prebuilts" revision="master" groups="pdk"/>
+  <project name="platform/external/oss-fuzz" path="external/oss-fuzz" revision="master" groups="pdk"/>
+  <project name="platform/external/owasp/sanitizer" path="external/owasp/sanitizer" revision="master" groups="pdk"/>
+  <project name="platform/external/pandora/avatar" path="external/pandora/avatar" revision="master" groups="pdk"/>
+  <project name="platform/external/pandora/bt-test-interfaces" path="external/pandora/bt-test-interfaces" revision="master" groups="pdk"/>
+  <project name="platform/external/pandora/mmi2grpc" path="external/pandora/mmi2grpc" revision="master" groups="pdk"/>
+  <project name="platform/external/parameter-framework" path="external/parameter-framework" revision="master" groups="pdk"/>
+  <project name="platform/external/pcre" path="external/pcre" revision="master" groups="pdk"/>
+  <project name="platform/external/pdfium" path="external/pdfium" revision="master" groups="pdk"/>
+  <project name="platform/external/perfetto" path="external/perfetto" revision="master" groups="pdk"/>
+  <project name="platform/external/pffft" path="external/pffft" revision="master" groups="pdk"/>
+  <project name="platform/external/piex" path="external/piex" revision="master" groups="pdk"/>
+  <project name="platform/external/pigweed" path="external/pigweed" revision="master" groups="pdk"/>
+  <project name="platform/external/ply" path="external/ply" revision="master" groups="pdk"/>
+  <project name="platform/external/ppp" path="external/ppp" revision="master" groups="pdk"/>
+  <project name="platform/external/proguard" path="external/proguard" revision="master" groups="pdk"/>
+  <project name="platform/external/protobuf" path="external/protobuf" revision="master" groups="pdk"/>
+  <project name="platform/external/psimd" path="external/psimd" revision="master" groups="pdk"/>
+  <project name="platform/external/pthreadpool" path="external/pthreadpool" revision="master" groups="pdk"/>
+  <project name="platform/external/puffin" path="external/puffin" revision="master" groups="pdk"/>
+  <project name="platform/external/python/apitools" path="external/python/apitools" revision="master" groups="pdk"/>
+  <project name="platform/external/python/asn1crypto" path="external/python/asn1crypto" revision="master" groups="pdk"/>
+  <project name="platform/external/python/bumble" path="external/python/bumble" revision="master" groups="pdk"/>
+  <project name="platform/external/python/cachetools" path="external/python/cachetools" revision="master" groups="pdk"/>
+  <project name="platform/external/python/cffi" path="external/python/cffi" revision="master" groups="pdk"/>
+  <project name="platform/external/python/cpython2" path="external/python/cpython2" revision="master" groups="pdk"/>
+  <project name="platform/external/python/cpython3" path="external/python/cpython3" revision="master" groups="pdk"/>
+  <project name="platform/external/python/cryptography" path="external/python/cryptography" revision="master" groups="pdk"/>
+  <project name="platform/external/python/dateutil" path="external/python/dateutil" revision="master" groups="pdk"/>
+  <project name="platform/external/python/enum34" path="external/python/enum34" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/funcsigs" path="external/python/funcsigs" revision="master" groups="pdk"/>
+  <project name="platform/external/python/futures" path="external/python/futures" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/google-api-python-client" path="external/python/google-api-python-client" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/google-auth-library-python" path="external/python/google-auth-library-python" revision="master" groups="pdk"/>
+  <project name="platform/external/python/httplib2" path="external/python/httplib2" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/ipaddress" path="external/python/ipaddress" revision="master" groups="pdk"/>
+  <project name="platform/external/python/jinja" path="external/python/jinja" revision="master" groups="pdk"/>
+  <project name="platform/external/python/markupsafe" path="external/python/markupsafe" revision="master" groups="pdk"/>
+  <project name="platform/external/python/mobly" path="external/python/mobly" revision="master" groups="pdk"/>
+  <project name="platform/external/python/oauth2client" path="external/python/oauth2client" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/parse_type" path="external/python/parse_type" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/portpicker" path="external/python/portpicker" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyasn1" path="external/python/pyasn1" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/pyasn1-modules" path="external/python/pyasn1-modules" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/pybind11" path="external/python/pybind11" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pycparser" path="external/python/pycparser" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyee" path="external/python/pyee" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyfakefs" path="external/python/pyfakefs" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyopenssl" path="external/python/pyopenssl" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyserial" path="external/python/pyserial" revision="master" groups="pdk"/>
+  <project name="platform/external/python/python-api-core" path="external/python/python-api-core" revision="master" groups="pdk"/>
+  <project name="platform/external/python/pyyaml" path="external/python/pyyaml" revision="master" groups="pdk"/>
+  <project name="platform/external/python/rsa" path="external/python/rsa" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/setuptools" path="external/python/setuptools" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/six" path="external/python/six" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/python/timeout-decorator" path="external/python/timeout-decorator" revision="master" groups="pdk"/>
+  <project name="platform/external/python/typing" path="external/python/typing" revision="master" groups="pdk"/>
+  <project name="platform/external/python/uritemplates" path="external/python/uritemplates" revision="master" groups="vts,pdk"/>
+  <project name="platform/external/rappor" path="external/rappor" revision="master" groups="pdk"/>
+  <project name="platform/external/renderscript-intrinsics-replacement-toolkit" path="external/renderscript-intrinsics-replacement-toolkit" revision="master" groups="pdk"/>
+  <project name="platform/external/replicaisland" path="external/replicaisland" revision="master" groups="pdk"/>
+  <project name="platform/external/rmi4utils" path="external/rmi4utils" revision="master" groups="pdk"/>
+  <project name="platform/external/rnnoise" path="external/rnnoise" revision="master" groups="pdk"/>
+  <project name="platform/external/robolectric-shadows" path="external/robolectric-shadows" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/external/roboto-fonts" path="external/roboto-fonts" revision="master" groups="pdk"/>
+  <project name="platform/external/rootdev" path="external/rootdev" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ahash" path="external/rust/crates/ahash" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/aho-corasick" path="external/rust/crates/aho-corasick" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/android_log-sys" path="external/rust/crates/android_log-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/android_logger" path="external/rust/crates/android_logger" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/anyhow" path="external/rust/crates/anyhow" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/arbitrary" path="external/rust/crates/arbitrary" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/argh" path="external/rust/crates/argh" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/argh_derive" path="external/rust/crates/argh_derive" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/argh_shared" path="external/rust/crates/argh_shared" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ash" path="external/rust/crates/ash" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/async-stream" path="external/rust/crates/async-stream" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/async-stream-impl" path="external/rust/crates/async-stream-impl" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/async-task" path="external/rust/crates/async-task" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/async-trait" path="external/rust/crates/async-trait" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/atty" path="external/rust/crates/atty" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/base64" path="external/rust/crates/base64" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/bencher" path="external/rust/crates/bencher" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/bindgen" path="external/rust/crates/bindgen" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/bitflags" path="external/rust/crates/bitflags" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/bstr" path="external/rust/crates/bstr" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/byteorder" path="external/rust/crates/byteorder" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/bytes" path="external/rust/crates/bytes" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/cast" path="external/rust/crates/cast" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/cesu8" path="external/rust/crates/cesu8" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/cexpr" path="external/rust/crates/cexpr" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/cfg-if" path="external/rust/crates/cfg-if" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/chrono" path="external/rust/crates/chrono" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ciborium" path="external/rust/crates/ciborium" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ciborium-io" path="external/rust/crates/ciborium-io" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ciborium-ll" path="external/rust/crates/ciborium-ll" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/clang-sys" path="external/rust/crates/clang-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/clap" path="external/rust/crates/clap" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/codespan-reporting" path="external/rust/crates/codespan-reporting" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/combine" path="external/rust/crates/combine" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/command-fds" path="external/rust/crates/command-fds" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/coset" path="external/rust/crates/coset" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crc32fast" path="external/rust/crates/crc32fast" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/criterion" path="external/rust/crates/criterion" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/criterion-plot" path="external/rust/crates/criterion-plot" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crossbeam-channel" path="external/rust/crates/crossbeam-channel" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crossbeam-deque" path="external/rust/crates/crossbeam-deque" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crossbeam-epoch" path="external/rust/crates/crossbeam-epoch" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crossbeam-queue" path="external/rust/crates/crossbeam-queue" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/crossbeam-utils" path="external/rust/crates/crossbeam-utils" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/csv" path="external/rust/crates/csv" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/csv-core" path="external/rust/crates/csv-core" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/der-oid-macro" path="external/rust/crates/der-oid-macro" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/der-parser" path="external/rust/crates/der-parser" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/derive_arbitrary" path="external/rust/crates/derive_arbitrary" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/downcast-rs" path="external/rust/crates/downcast-rs" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/either" path="external/rust/crates/either" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/enumn" path="external/rust/crates/enumn" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/env_logger" path="external/rust/crates/env_logger" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/fallible-iterator" path="external/rust/crates/fallible-iterator" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/fallible-streaming-iterator" path="external/rust/crates/fallible-streaming-iterator" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/flate2" path="external/rust/crates/flate2" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/fnv" path="external/rust/crates/fnv" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/form_urlencoded" path="external/rust/crates/form_urlencoded" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures" path="external/rust/crates/futures" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-channel" path="external/rust/crates/futures-channel" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-core" path="external/rust/crates/futures-core" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-executor" path="external/rust/crates/futures-executor" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-io" path="external/rust/crates/futures-io" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-macro" path="external/rust/crates/futures-macro" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-sink" path="external/rust/crates/futures-sink" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-task" path="external/rust/crates/futures-task" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/futures-util" path="external/rust/crates/futures-util" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/gdbstub" path="external/rust/crates/gdbstub" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/gdbstub_arch" path="external/rust/crates/gdbstub_arch" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/getrandom" path="external/rust/crates/getrandom" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/glob" path="external/rust/crates/glob" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/grpcio" path="external/rust/crates/grpcio" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/grpcio-compiler" path="external/rust/crates/grpcio-compiler" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/grpcio-sys" path="external/rust/crates/grpcio-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/half" path="external/rust/crates/half" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/hashbrown" path="external/rust/crates/hashbrown" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/hashlink" path="external/rust/crates/hashlink" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/heck" path="external/rust/crates/heck" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/idna" path="external/rust/crates/idna" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/instant" path="external/rust/crates/instant" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/intrusive-collections" path="external/rust/crates/intrusive-collections" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/itertools" path="external/rust/crates/itertools" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/itoa" path="external/rust/crates/itoa" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/jni" path="external/rust/crates/jni" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/jni-sys" path="external/rust/crates/jni-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/kernlog" path="external/rust/crates/kernlog" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/lazy_static" path="external/rust/crates/lazy_static" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/lazycell" path="external/rust/crates/lazycell" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libc" path="external/rust/crates/libc" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libfuzzer-sys" path="external/rust/crates/libfuzzer-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libloading" path="external/rust/crates/libloading" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libm" path="external/rust/crates/libm" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libsqlite3-sys" path="external/rust/crates/libsqlite3-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/libz-sys" path="external/rust/crates/libz-sys" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/linked-hash-map" path="external/rust/crates/linked-hash-map" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/lock_api" path="external/rust/crates/lock_api" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/log" path="external/rust/crates/log" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/lru-cache" path="external/rust/crates/lru-cache" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/macaddr" path="external/rust/crates/macaddr" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/managed" path="external/rust/crates/managed" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/matches" path="external/rust/crates/matches" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/memchr" path="external/rust/crates/memchr" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/memoffset" path="external/rust/crates/memoffset" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/minimal-lexical" path="external/rust/crates/minimal-lexical" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/mio" path="external/rust/crates/mio" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/nix" path="external/rust/crates/nix" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/no-panic" path="external/rust/crates/no-panic" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/nom" path="external/rust/crates/nom" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/num-bigint" path="external/rust/crates/num-bigint" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/num-derive" path="external/rust/crates/num-derive" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/num-integer" path="external/rust/crates/num-integer" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/num-traits" path="external/rust/crates/num-traits" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/num_cpus" path="external/rust/crates/num_cpus" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/oid-registry" path="external/rust/crates/oid-registry" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/once_cell" path="external/rust/crates/once_cell" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/oorandom" path="external/rust/crates/oorandom" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/parking_lot" path="external/rust/crates/parking_lot" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/parking_lot_core" path="external/rust/crates/parking_lot_core" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/paste" path="external/rust/crates/paste" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/peeking_take_while" path="external/rust/crates/peeking_take_while" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/percent-encoding" path="external/rust/crates/percent-encoding" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pest" path="external/rust/crates/pest" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pest_derive" path="external/rust/crates/pest_derive" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pest_generator" path="external/rust/crates/pest_generator" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pest_meta" path="external/rust/crates/pest_meta" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pin-project" path="external/rust/crates/pin-project" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pin-project-internal" path="external/rust/crates/pin-project-internal" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pin-project-lite" path="external/rust/crates/pin-project-lite" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/pin-utils" path="external/rust/crates/pin-utils" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/plotters" path="external/rust/crates/plotters" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/plotters-backend" path="external/rust/crates/plotters-backend" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/plotters-svg" path="external/rust/crates/plotters-svg" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ppv-lite86" path="external/rust/crates/ppv-lite86" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/proc-macro-error" path="external/rust/crates/proc-macro-error" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/proc-macro-error-attr" path="external/rust/crates/proc-macro-error-attr" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/proc-macro-hack" path="external/rust/crates/proc-macro-hack" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/proc-macro-nested" path="external/rust/crates/proc-macro-nested" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/proc-macro2" path="external/rust/crates/proc-macro2" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/protobuf" path="external/rust/crates/protobuf" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/protobuf-codegen" path="external/rust/crates/protobuf-codegen" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/quiche" path="external/rust/crates/quiche" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/quickcheck" path="external/rust/crates/quickcheck" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/quote" path="external/rust/crates/quote" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rand" path="external/rust/crates/rand" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rand_chacha" path="external/rust/crates/rand_chacha" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rand_core" path="external/rust/crates/rand_core" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rand_xorshift" path="external/rust/crates/rand_xorshift" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rayon" path="external/rust/crates/rayon" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rayon-core" path="external/rust/crates/rayon-core" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/regex" path="external/rust/crates/regex" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/regex-automata" path="external/rust/crates/regex-automata" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/regex-syntax" path="external/rust/crates/regex-syntax" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/remain" path="external/rust/crates/remain" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/remove_dir_all" path="external/rust/crates/remove_dir_all" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ring" path="external/rust/crates/ring" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rusqlite" path="external/rust/crates/rusqlite" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rustc-demangle" path="external/rust/crates/rustc-demangle" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rustc-demangle-capi" path="external/rust/crates/rustc-demangle-capi" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rustc-hash" path="external/rust/crates/rustc-hash" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rusticata-macros" path="external/rust/crates/rusticata-macros" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/rustversion" path="external/rust/crates/rustversion" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ryu" path="external/rust/crates/ryu" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/same-file" path="external/rust/crates/same-file" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/scopeguard" path="external/rust/crates/scopeguard" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/semver" path="external/rust/crates/semver" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde" path="external/rust/crates/serde" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde-xml-rs" path="external/rust/crates/serde-xml-rs" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde_cbor" path="external/rust/crates/serde_cbor" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde_derive" path="external/rust/crates/serde_derive" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde_json" path="external/rust/crates/serde_json" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/serde_test" path="external/rust/crates/serde_test" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/shared_child" path="external/rust/crates/shared_child" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/shared_library" path="external/rust/crates/shared_library" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/shlex" path="external/rust/crates/shlex" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/slab" path="external/rust/crates/slab" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/smallvec" path="external/rust/crates/smallvec" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/spin" path="external/rust/crates/spin" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/structopt" path="external/rust/crates/structopt" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/structopt-derive" path="external/rust/crates/structopt-derive" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/syn" path="external/rust/crates/syn" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/syn-mid" path="external/rust/crates/syn-mid" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tempfile" path="external/rust/crates/tempfile" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/termcolor" path="external/rust/crates/termcolor" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/textwrap" path="external/rust/crates/textwrap" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/thiserror" path="external/rust/crates/thiserror" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/thiserror-impl" path="external/rust/crates/thiserror-impl" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/thread_local" path="external/rust/crates/thread_local" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tinytemplate" path="external/rust/crates/tinytemplate" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tinyvec" path="external/rust/crates/tinyvec" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tinyvec_macros" path="external/rust/crates/tinyvec_macros" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tokio" path="external/rust/crates/tokio" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tokio-macros" path="external/rust/crates/tokio-macros" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tokio-stream" path="external/rust/crates/tokio-stream" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/tokio-test" path="external/rust/crates/tokio-test" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/ucd-trie" path="external/rust/crates/ucd-trie" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/unicode-bidi" path="external/rust/crates/unicode-bidi" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/unicode-normalization" path="external/rust/crates/unicode-normalization" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/unicode-segmentation" path="external/rust/crates/unicode-segmentation" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/unicode-width" path="external/rust/crates/unicode-width" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/unicode-xid" path="external/rust/crates/unicode-xid" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/untrusted" path="external/rust/crates/untrusted" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/url" path="external/rust/crates/url" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/uuid" path="external/rust/crates/uuid" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/vsock" path="external/rust/crates/vsock" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/vulkano" path="external/rust/crates/vulkano" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/walkdir" path="external/rust/crates/walkdir" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/weak-table" path="external/rust/crates/weak-table" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/webpki" path="external/rust/crates/webpki" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/which" path="external/rust/crates/which" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/x509-parser" path="external/rust/crates/x509-parser" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/xml-rs" path="external/rust/crates/xml-rs" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/crates/zip" path="external/rust/crates/zip" revision="master" groups="pdk"/>
+  <project name="platform/external/rust/cxx" path="external/rust/cxx" revision="master" groups="pdk"/>
+  <project name="platform/external/ruy" path="external/ruy" revision="master" groups="pdk"/>
+  <project name="platform/external/s2-geometry-library-java" path="external/s2-geometry-library-java" revision="master" groups="pdk"/>
+  <project name="platform/external/scapy" path="external/scapy" revision="master" groups="pdk-fs"/>
+  <project name="platform/external/scrypt" path="external/scrypt" revision="master" groups="pdk"/>
+  <project name="platform/external/scudo" path="external/scudo" revision="master" groups="pdk"/>
+  <project name="platform/external/seccomp-tests" path="external/seccomp-tests" revision="master" groups="pdk"/>
+  <project name="platform/external/selinux" path="external/selinux" revision="master" groups="pdk"/>
+  <project name="platform/external/setupcompat" path="external/setupcompat" revision="master" groups="pdk"/>
+  <project name="platform/external/setupdesign" path="external/setupdesign" revision="master" groups="pdk"/>
+  <project name="platform/external/sfntly" path="external/sfntly" revision="master" groups="pdk,qcom_msm8x26"/>
+  <project name="platform/external/shaderc/spirv-headers" path="external/shaderc/spirv-headers" revision="master" groups="pdk"/>
+  <project name="platform/external/shflags" path="external/shflags" revision="master" groups="pdk"/>
+  <project name="platform/external/skia" path="external/skia" revision="master" groups="pdk"/>
+  <project name="platform/external/sl4a" path="external/sl4a" revision="master" groups="pdk"/>
+  <project name="platform/external/slf4j" path="external/slf4j" revision="master" groups="pdk"/>
+  <project name="platform/external/smali" path="external/smali" revision="master" groups="pdk"/>
+  <project name="platform/external/snakeyaml" path="external/snakeyaml" revision="master" groups="pdk"/>
+  <project name="platform/external/sonic" path="external/sonic" revision="master" groups="pdk"/>
+  <project name="platform/external/sonivox" path="external/sonivox" revision="master" groups="pdk"/>
+  <project name="platform/external/speex" path="external/speex" revision="master" groups="pdk"/>
+  <project name="platform/external/sqlite" path="external/sqlite" revision="master" groups="pdk"/>
+  <project name="platform/external/squashfs-tools" path="external/squashfs-tools" revision="master" groups="pdk"/>
+  <project name="platform/external/stardoc" path="external/stardoc" revision="master" groups="pdk"/>
+  <project name="platform/external/starlark-go" path="external/starlark-go" revision="master" groups="pdk"/>
+  <project name="platform/external/strace" path="external/strace" revision="master" groups="pdk"/>
+  <project name="platform/external/stressapptest" path="external/stressapptest" revision="master" groups="pdk"/>
+  <project name="platform/external/subsampling-scale-image-view" path="external/subsampling-scale-image-view" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/external/swiftshader" path="external/swiftshader" revision="master" groups="pdk"/>
+  <project name="platform/external/tagsoup" path="external/tagsoup" revision="master" groups="pdk"/>
+  <project name="platform/external/tcpdump" path="external/tcpdump" revision="master" groups="pdk"/>
+  <project name="platform/external/tensorflow" path="external/tensorflow" revision="master" groups="pdk"/>
+  <project name="platform/external/testng" path="external/testng" revision="master" groups="pdk"/>
+  <project name="platform/external/tflite-support" path="external/tflite-support" revision="master" groups="pdk"/>
+  <project name="platform/external/timezone-boundary-builder" path="external/timezone-boundary-builder" revision="master" groups="pdk" clone-depth="2"/>
+  <project name="platform/external/tinyalsa" path="external/tinyalsa" revision="master"/>
+  <project name="platform/external/tinyalsa_new" path="external/tinyalsa_new" revision="master" groups="pdk"/>
+  <project name="platform/external/tinycompress" path="external/tinycompress" revision="master" groups="pdk"/>
+  <project name="platform/external/tinyxml2" path="external/tinyxml2" revision="master" groups="pdk"/>
+  <project name="platform/external/toolchain-utils" path="external/toolchain-utils" revision="master"/>
+  <project name="platform/external/toybox" path="external/toybox" revision="master" groups="pdk"/>
+  <project name="platform/external/tpm2-tss" path="external/tpm2-tss" revision="master" groups="pdk"/>
+  <project name="platform/external/trace-cmd" path="external/trace-cmd" revision="master" groups="pdk"/>
+  <project name="platform/external/tremolo" path="external/tremolo" revision="master" groups="pdk"/>
+  <project name="platform/external/turbine" path="external/turbine" revision="master" groups="pdk"/>
+  <project name="platform/external/ukey2" path="external/ukey2" revision="master" groups="pdk"/>
+  <project name="platform/external/unicode" path="external/unicode" revision="master" groups="pdk"/>
+  <project name="platform/external/universal-tween-engine" path="external/universal-tween-engine" revision="master"/>
+  <project name="platform/external/usrsctp" path="external/usrsctp" revision="master" groups="pdk"/>
+  <project name="platform/external/uwb" path="external/uwb" revision="master" groups="pdk"/>
+  <project name="platform/external/v4l2_codec2" path="external/v4l2_codec2" revision="master" groups="pdk"/>
+  <project name="platform/external/vboot_reference" path="external/vboot_reference" revision="master" groups="vboot,pdk-fs"/>
+  <project name="platform/external/virglrenderer" path="external/virglrenderer" revision="master" groups="pdk"/>
+  <project name="platform/external/vixl" path="external/vixl" revision="master" groups="pdk"/>
+  <project name="platform/external/vogar" path="external/vogar" revision="master" groups="pdk"/>
+  <project name="platform/external/volley" path="external/volley" revision="master" groups="pdk"/>
+  <project name="platform/external/vulkan-headers" path="external/vulkan-headers" revision="master" groups="pdk"/>
+  <project name="platform/external/vulkan-validation-layers" path="external/vulkan-validation-layers" revision="master" groups="pdk"/>
+  <project name="platform/external/walt" path="external/walt" revision="master" groups="pdk"/>
+  <project name="platform/external/wayland" path="external/wayland" revision="master" groups="pdk"/>
+  <project name="platform/external/wayland-protocols" path="external/wayland-protocols" revision="master" groups="pdk"/>
+  <project name="platform/external/webp" path="external/webp" revision="master" groups="pdk,qcom_msm8x26"/>
+  <project name="platform/external/webrtc" path="external/webrtc" revision="master" groups="pdk"/>
+  <project name="platform/external/wmediumd" path="external/wmediumd" revision="master" groups="pdk"/>
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" revision="master" groups="pdk"/>
+  <project name="platform/external/wuffs-mirror-release-c" path="external/wuffs-mirror-release-c" revision="master" groups="pdk,qcom_msm8x26"/>
+  <project name="platform/external/wycheproof" path="external/wycheproof" revision="master" groups="pdk"/>
+  <project name="platform/external/xmp_toolkit" path="external/xmp_toolkit" revision="master" groups="pdk"/>
+  <project name="platform/external/xz-embedded" path="external/xz-embedded" revision="master" groups="pdk"/>
+  <project name="platform/external/xz-java" path="external/xz-java" revision="master" groups="pdk"/>
+  <project name="platform/external/yapf" path="external/yapf" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/external/zlib" path="external/zlib" revision="master" groups="pdk"/>
+  <project name="platform/external/zopfli" path="external/zopfli" revision="master" groups="pdk"/>
+  <project name="platform/external/zstd" path="external/zstd" revision="master" groups="pdk"/>
+  <project name="platform/external/zucchini" path="external/zucchini" revision="master" groups="pdk"/>
+  <project name="platform/external/zxing" path="external/zxing" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/av" path="frameworks/av" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/base" path="frameworks/base" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/ex" path="frameworks/ex" revision="master"/>
+  <project name="platform/frameworks/hardware/interfaces" path="frameworks/hardware/interfaces" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/layoutlib" path="frameworks/layoutlib" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/libs/modules-utils" path="frameworks/libs/modules-utils" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/libs/native_bridge_support" path="frameworks/libs/native_bridge_support" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/libs/net" path="frameworks/libs/net" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/libs/service_entitlement" path="frameworks/libs/service_entitlement" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/libs/systemui" path="frameworks/libs/systemui" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/minikin" path="frameworks/minikin" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/multidex" path="frameworks/multidex" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/native" path="frameworks/native" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" revision="master" groups="pdk-fs"/>
+  <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/car/services" path="frameworks/opt/car/services" revision="master" groups="pdk-fs"/>
+  <project name="platform/frameworks/opt/car/setupwizard" path="frameworks/opt/car/setupwizard" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/opt/chips" path="frameworks/opt/chips" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/localepicker" path="frameworks/opt/localepicker" revision="master"/>
+  <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" revision="master" groups="pdk-fs"/>
+  <project name="platform/frameworks/opt/net/ims" path="frameworks/opt/net/ims" revision="master" groups="frameworks_ims,pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/setupwizard" path="frameworks/opt/setupwizard" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/tv/tvsystem" path="frameworks/opt/tv/tvsystem" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/proto_logging" path="frameworks/proto_logging" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/frameworks/rs" path="frameworks/rs" revision="master" groups="pdk"/>
+  <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/hardware/aic" path="hardware/aic" remote="rk" revision="master"/>
+  <project name="platform/hardware/bes" path="hardware/bes" remote="rk" revision="master"/>
+  <project name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" revision="master" groups="pdk"/>
+  <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" remote="rk" revision="master"/>
+  <project name="platform/hardware/google/apf" path="hardware/google/apf" revision="master" groups="pdk"/>
+  <project name="platform/hardware/google/av" path="hardware/google/av" revision="master" groups="pdk"/>
+  <project name="platform/hardware/google/camera" path="hardware/google/camera" revision="master" groups="pdk"/>
+  <project name="platform/hardware/google/easel" path="hardware/google/easel" revision="master" groups="pdk,easel"/>
+  <project name="platform/hardware/google/gchips" path="hardware/google/gchips" revision="master" groups="pdk-lassen,pdk-gs-arm"/>
+  <project name="platform/hardware/google/graphics/common" path="hardware/google/graphics/common" revision="master" groups="pdk-lassen,pdk-gs-arm"/>
+  <project name="platform/hardware/google/interfaces" path="hardware/google/interfaces" revision="master" groups="pdk"/>
+  <project name="platform/hardware/google/pixel" path="hardware/google/pixel" revision="master" groups="generic_fs,pixel"/>
+  <project name="platform/hardware/google/pixel-sepolicy" path="hardware/google/pixel-sepolicy" revision="master" groups="generic_fs,pixel"/>
+  <project name="platform/hardware/interfaces" path="hardware/interfaces" revision="master" groups="pdk"/>
+  <project name="platform/hardware/invensense" path="hardware/invensense" revision="master" groups="invensense,pdk"/>
+  <project name="platform/hardware/knowles/athletico/sound_trigger_hal" path="hardware/knowles/athletico/sound_trigger_hal" revision="master" groups="coral,generic_fs"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="master" groups="pdk"/>
+  <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="master" groups="pdk"/>
+  <project name="platform/hardware/nxp/nfc" path="hardware/nxp/nfc" revision="master" groups="pdk"/>
+  <project name="platform/hardware/nxp/secure_element" path="hardware/nxp/secure_element" revision="master" groups="pdk"/>
+  <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio" revision="master" groups="qcom,qcom_audio,pdk-qcom"/>
+  <project name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="master" groups="pdk-qcom"/>
+  <project name="platform/hardware/qcom/bt" path="hardware/qcom/bt" revision="master" groups="qcom,pdk-qcom"/>
+  <project name="platform/hardware/qcom/camera" path="hardware/qcom/camera" revision="master" groups="qcom_camera,pdk-qcom"/>
+  <project name="platform/hardware/qcom/data/ipacfg-mgr" path="hardware/qcom/data/ipacfg-mgr" revision="master" groups="qcom,pdk-qcom"/>
+  <project name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="master" groups="pdk-qcom,qcom,qcom_display"/>
+  <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="master" groups="qcom,qcom_gps,pdk-qcom"/>
+  <project name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" revision="master" groups="qcom,qcom_keymaster,pdk-qcom"/>
+  <project name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="master" groups="qcom,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8960" path="hardware/qcom/msm8960" revision="master" groups="qcom_msm8960,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8994" path="hardware/qcom/msm8994" revision="master" groups="qcom_msm8994,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8996" path="hardware/qcom/msm8996" revision="master" groups="qcom_msm8996,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8x09" path="hardware/qcom/msm8x09" revision="master" groups="qcom_msm8x09"/>
+  <project name="platform/hardware/qcom/msm8x26" path="hardware/qcom/msm8x26" revision="master" groups="qcom_msm8x26,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8x27" path="hardware/qcom/msm8x27" revision="master" groups="qcom_msm8x27,pdk-qcom"/>
+  <project name="platform/hardware/qcom/msm8x84" path="hardware/qcom/msm8x84" revision="master" groups="qcom_msm8x84,pdk-qcom"/>
+  <project name="platform/hardware/qcom/power" path="hardware/qcom/power" revision="master" groups="qcom,pdk-qcom"/>
+  <project name="platform/hardware/qcom/sdm845/bt" path="hardware/qcom/sdm845/bt" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sdm845/data/ipacfg-mgr" path="hardware/qcom/sdm845/data/ipacfg-mgr" revision="master" groups="generic_fs,vendor,qcom_sdm845">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk"/>
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sdm845/Android.bp"/>
+  </project>
+  <project name="platform/hardware/qcom/sdm845/display" path="hardware/qcom/sdm845/display" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sdm845/gps" path="hardware/qcom/sdm845/gps" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sdm845/media" path="hardware/qcom/sdm845/media" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sdm845/thermal" path="hardware/qcom/sdm845/thermal" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sdm845/vr" path="hardware/qcom/sdm845/vr" revision="master" groups="generic_fs,qcom_sdm845"/>
+  <project name="platform/hardware/qcom/sm7150/gps" path="hardware/qcom/sm7150/gps" revision="master" groups="qcom_sm7150">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7150/Android.mk"/>
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm7150/Android.bp"/>
+  </project>
+  <project name="platform/hardware/qcom/sm7250/display" path="hardware/qcom/sm7250/display" revision="master" groups="qcom_sm7250"/>
+  <project name="platform/hardware/qcom/sm7250/gps" path="hardware/qcom/sm7250/gps" revision="master" groups="qcom_sm7250">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm7250/Android.mk"/>
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm7250/Android.bp"/>
+  </project>
+  <project name="platform/hardware/qcom/sm7250/media" path="hardware/qcom/sm7250/media" revision="master" groups="qcom_sm7250"/>
+  <project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" path="hardware/qcom/sm8150/data/ipacfg-mgr" revision="master" groups="qcom_sm8150">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk"/>
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp"/>
+  </project>
+  <project name="platform/hardware/qcom/sm8150/display" path="hardware/qcom/sm8150/display" revision="master" groups="qcom_sm8150"/>
+  <project name="platform/hardware/qcom/sm8150/gps" path="hardware/qcom/sm8150/gps" revision="master" groups="qcom_sm8150"/>
+  <project name="platform/hardware/qcom/sm8150/media" path="hardware/qcom/sm8150/media" revision="master" groups="qcom_sm8150"/>
+  <project name="platform/hardware/qcom/sm8150/thermal" path="hardware/qcom/sm8150/thermal" revision="master" groups="qcom_sm8150"/>
+  <project name="platform/hardware/qcom/sm8150/vr" path="hardware/qcom/sm8150/vr" revision="master" groups="qcom_sm8150"/>
+  <project name="platform/hardware/qcom/sm8150p/gps" path="hardware/qcom/sm8150p/gps" revision="master" groups="qcom_sm8150p">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150p/Android.mk"/>
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150p/Android.bp"/>
+  </project>
+  <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="master" groups="qcom_wlan,pdk-qcom"/>
+  <project name="platform/hardware/realtek" path="hardware/realtek" remote="rk" revision="master"/>
+  <project name="platform/hardware/ril" path="hardware/ril" revision="master" groups="pdk"/>
+  <project name="platform/hardware/rockchip/wifi" path="hardware/rockchip/wifi" remote="rk" revision="master"/>
+  <project name="platform/hardware/samsung/nfc" path="hardware/samsung/nfc" revision="master" groups="pdk"/>
+  <project name="platform/hardware/st/nfc" path="hardware/st/nfc" revision="master" groups="pdk"/>
+  <project name="platform/hardware/st/secure_element" path="hardware/st/secure_element" revision="master" groups="pdk"/>
+  <project name="platform/hardware/st/secure_element2" path="hardware/st/secure_element2" revision="master" groups="pdk"/>
+  <project name="platform/hardware/ti/am57x" path="hardware/ti/am57x" revision="master" groups="pdk"/>
+  <project name="platform/libcore" path="libcore" revision="master" groups="pdk"/>
+  <project name="platform/libnativehelper" path="libnativehelper" revision="master" groups="pdk"/>
+  <project name="platform/mkcombinedroot" path="mkcombinedroot" remote="rk" revision="master">
+    <linkfile src="configs/android-13.config" dest="kernel-5.10/kernel/configs/android-13.config"/>
+    <linkfile src="configs/android-13-go.config" dest="kernel-5.10/kernel/configs/android-13-go.config"/>
+    <linkfile src="configs/non_debuggable.config" dest="kernel-5.10/kernel/configs/non_debuggable.config"/>
+    <linkfile src="configs/pcie_wifi.config" dest="kernel-5.10/kernel/configs/pcie_wifi.config"/>
+    <linkfile src="configs/rk356x.config" dest="kernel-5.10/kernel/configs/rk356x.config"/>
+    <linkfile src="configs/rk3326.config" dest="kernel-5.10/kernel/configs/rk3326.config"/>
+    <linkfile src="configs/rk3399.config" dest="kernel-5.10/kernel/configs/rk3399.config"/>
+  </project>
+  <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Camera2" path="packages/apps/Camera2" revision="master"/>
+  <project name="platform/packages/apps/Car/Calendar" path="packages/apps/Car/Calendar" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Cluster" path="packages/apps/Car/Cluster" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/DebuggingRestrictionController" path="packages/apps/Car/DebuggingRestrictionController" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/DialerPrebuilt" path="packages/apps/Car/DialerPrebuilt" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Hvac" path="packages/apps/Car/Hvac" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/LatinIME" path="packages/apps/Car/LatinIME" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Launcher" path="packages/apps/Car/Launcher" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/LinkViewer" path="packages/apps/Car/LinkViewer" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/LocalMediaPlayer" path="packages/apps/Car/LocalMediaPlayer" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/MediaPrebuilt" path="packages/apps/Car/MediaPrebuilt" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/MessengerPrebuilt" path="packages/apps/Car/MessengerPrebuilt" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Notification" path="packages/apps/Car/Notification" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Provision" path="packages/apps/Car/Provision" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Radio" path="packages/apps/Car/Radio" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/RotaryController" path="packages/apps/Car/RotaryController" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/Settings" path="packages/apps/Car/Settings" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/SettingsIntelligence" path="packages/apps/Car/SettingsIntelligence" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/SystemUI" path="packages/apps/Car/SystemUI" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Car/systemlibs" path="packages/apps/Car/systemlibs" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/DevCamera" path="packages/apps/DevCamera" revision="master" groups="pdk"/>
+  <project name="platform/packages/apps/Dialer" path="packages/apps/Dialer" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/DocumentsUI" path="packages/apps/DocumentsUI" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/EmergencyInfo" path="packages/apps/EmergencyInfo" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" remote="rk" revision="master"/>
+  <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/ImsServiceEntitlement" path="packages/apps/ImsServiceEntitlement" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Messaging" path="packages/apps/Messaging" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Music" path="packages/apps/Music" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" revision="master" groups="apps_nfc,pdk-fs"/>
+  <project name="platform/packages/apps/OnDeviceAppPrediction" path="packages/apps/OnDeviceAppPrediction" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/apps/Protips" path="packages/apps/Protips" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Provision" path="packages/apps/Provision" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/QuickAccessWallet" path="packages/apps/QuickAccessWallet" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/RemoteProvisioner" path="packages/apps/RemoteProvisioner" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SampleLocationAttribution" path="packages/apps/SampleLocationAttribution" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SecureElement" path="packages/apps/SecureElement" revision="master" groups="apps_se,pdk-fs"/>
+  <project name="platform/packages/apps/Settings" path="packages/apps/Settings" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SettingsIntelligence" path="packages/apps/SettingsIntelligence" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" remote="rk" revision="master"/>
+  <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Stk" path="packages/apps/Stk" revision="master" groups="apps_stk,pdk-fs"/>
+  <project name="platform/packages/apps/StorageManager" path="packages/apps/StorageManager" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/SystemUIGo" path="packages/apps/SystemUIGo" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/TV" path="packages/apps/TV" revision="master" groups="pdk"/>
+  <project name="platform/packages/apps/Tag" path="packages/apps/Tag" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity" revision="master" groups="pdk"/>
+  <project name="platform/packages/apps/ThemePicker" path="packages/apps/ThemePicker" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/TimeZoneData" path="packages/apps/TimeZoneData" revision="master" groups="pdk"/>
+  <project name="platform/packages/apps/TimeZoneUpdater" path="packages/apps/TimeZoneUpdater" revision="master" groups="pdk"/>
+  <project name="platform/packages/apps/Traceur" path="packages/apps/Traceur" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/UniversalMediaPlayer" path="packages/apps/UniversalMediaPlayer" revision="master"/>
+  <project name="platform/packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/apps/WallpaperPicker2" path="packages/apps/WallpaperPicker2" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/inputmethods/LeanbackIME" path="packages/inputmethods/LeanbackIME" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/modules/AdServices" path="packages/modules/AdServices" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/modules/AppSearch" path="packages/modules/AppSearch" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/ArtPrebuilt" path="packages/modules/ArtPrebuilt" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/packages/modules/Bluetooth" path="packages/modules/Bluetooth" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/BootPrebuilt/5.10/arm64" path="packages/modules/BootPrebuilt/5.10/arm64" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/packages/modules/BootPrebuilt/5.4/arm64" path="packages/modules/BootPrebuilt/5.4/arm64" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/packages/modules/CaptivePortalLogin" path="packages/modules/CaptivePortalLogin" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/CellBroadcastService" path="packages/modules/CellBroadcastService" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/Connectivity" path="packages/modules/Connectivity" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/DnsResolver" path="packages/modules/DnsResolver" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/ExtServices" path="packages/modules/ExtServices" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/GeoTZ" path="packages/modules/GeoTZ" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/Gki" path="packages/modules/Gki" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/IPsec" path="packages/modules/IPsec" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/IntentResolver" path="packages/modules/IntentResolver" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/Media" path="packages/modules/Media" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/ModuleMetadata" path="packages/modules/ModuleMetadata" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/NetworkPermissionConfig" path="packages/modules/NetworkPermissionConfig" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/NetworkStack" path="packages/modules/NetworkStack" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/NeuralNetworks" path="packages/modules/NeuralNetworks" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/OnDevicePersonalization" path="packages/modules/OnDevicePersonalization" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/modules/Permission" path="packages/modules/Permission" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/RuntimeI18n" path="packages/modules/RuntimeI18n" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/SEPolicy" path="packages/modules/SEPolicy" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/Scheduling" path="packages/modules/Scheduling" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/SdkExtensions" path="packages/modules/SdkExtensions" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/StatsD" path="packages/modules/StatsD" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/TestModule" path="packages/modules/TestModule" revision="master"/>
+  <project name="platform/packages/modules/Uwb" path="packages/modules/Uwb" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/Virtualization" path="packages/modules/Virtualization" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/Wifi" path="packages/modules/Wifi" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/adb" path="packages/modules/adb" revision="master" groups="pdk"/>
+  <project name="platform/packages/modules/common" path="packages/modules/common" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/modules/vndk" path="packages/modules/vndk" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/CallLogProvider" path="packages/providers/CallLogProvider" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/providers/TvProvider" path="packages/providers/TvProvider" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/services/AlternativeNetworkAccess" path="packages/services/AlternativeNetworkAccess" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/BuiltInPrintService" path="packages/services/BuiltInPrintService" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Car" path="packages/services/Car" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Iwlan" path="packages/services/Iwlan" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Mms" path="packages/services/Mms" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Mtp" path="packages/services/Mtp" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Telecomm" path="packages/services/Telecomm" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" revision="master"/>
+  <project name="platform/packages/wallpapers/ImageWallpaper" path="packages/wallpapers/ImageWallpaper" revision="master" groups="pdk-fs"/>
+  <project name="platform/packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker" revision="master" groups="pdk-fs"/>
+  <project name="platform/pdk" path="pdk" revision="master" groups="pdk"/>
+  <project name="platform/platform_testing" path="platform_testing" revision="master" groups="pdk-fs,pdk-cw-fs,cts"/>
+  <project name="platform/prebuilts/abi-dumps/ndk" path="prebuilts/abi-dumps/ndk" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/abi-dumps/platform" path="prebuilts/abi-dumps/platform" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/abi-dumps/vndk" path="prebuilts/abi-dumps/vndk" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/android-emulator" path="prebuilts/android-emulator" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/asuite" path="prebuilts/asuite" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/bazel/darwin-x86_64" path="prebuilts/bazel/darwin-x86_64" revision="master" groups="darwin,pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/bazel/linux-x86_64" path="prebuilts/bazel/linux-x86_64" revision="master" groups="linux,pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/bundletool" path="prebuilts/bundletool" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/clang-tools" path="prebuilts/clang-tools" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="master" groups="pdk,darwin" clone-depth="1"/>
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/cmdline-tools" path="prebuilts/cmdline-tools" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/devtools" path="prebuilts/devtools" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="master" groups="pdk,linux" clone-depth="1"/>
+  <project name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="master" groups="pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/go/darwin-x86" path="prebuilts/go/darwin-x86" revision="master" groups="darwin,pdk,tradefed" clone-depth="1"/>
+  <project name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="master" groups="linux,pdk,tradefed" clone-depth="1"/>
+  <project name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" revision="master" groups="pdk,pdk-cw-fs,pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk11" path="prebuilts/jdk/jdk11" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk17" path="prebuilts/jdk/jdk17" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/jdk/jdk9" path="prebuilts/jdk/jdk9" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/ktlint" path="prebuilts/ktlint" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/manifest-merger" path="prebuilts/manifest-merger" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" revision="master" groups="pdk-cw-fs,pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech" revision="master" groups="pdk-cw-fs,pdk-fs" clone-depth="1"/>
+  <project name="platform/prebuilts/misc" path="prebuilts/misc" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/AdServices" path="prebuilts/module_sdk/AdServices" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/AppSearch" path="prebuilts/module_sdk/AppSearch" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Bluetooth" path="prebuilts/module_sdk/Bluetooth" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Connectivity" path="prebuilts/module_sdk/Connectivity" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/IPsec" path="prebuilts/module_sdk/IPsec" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Media" path="prebuilts/module_sdk/Media" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/MediaProvider" path="prebuilts/module_sdk/MediaProvider" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/OnDevicePersonalization" path="prebuilts/module_sdk/OnDevicePersonalization" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Permission" path="prebuilts/module_sdk/Permission" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Scheduling" path="prebuilts/module_sdk/Scheduling" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/SdkExtensions" path="prebuilts/module_sdk/SdkExtensions" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/StatsD" path="prebuilts/module_sdk/StatsD" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Uwb" path="prebuilts/module_sdk/Uwb" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/Wifi" path="prebuilts/module_sdk/Wifi" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/art" path="prebuilts/module_sdk/art" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/module_sdk/conscrypt" path="prebuilts/module_sdk/conscrypt" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/ndk" path="prebuilts/ndk" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/r8" path="prebuilts/r8" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/remoteexecution-client" path="prebuilts/remoteexecution-client" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/runtime" path="prebuilts/runtime" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/rust" path="prebuilts/rust" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/sdk" path="prebuilts/sdk" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/tools" path="prebuilts/tools" revision="master" groups="pdk,tools" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v28" path="prebuilts/vndk/v28" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v29" path="prebuilts/vndk/v29" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v30" path="prebuilts/vndk/v30" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v31" path="prebuilts/vndk/v31" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/prebuilts/vndk/v32" path="prebuilts/vndk/v32" revision="master" groups="pdk" clone-depth="1"/>
+  <project name="platform/sdk" path="sdk" revision="master" groups="pdk-cw-fs,pdk-fs"/>
+  <project name="platform/system/apex" path="system/apex" revision="master" groups="pdk"/>
+  <project name="platform/system/bpf" path="system/bpf" revision="master" groups="pdk"/>
+  <project name="platform/system/bpfprogs" path="system/bpfprogs" revision="master" groups="pdk"/>
+  <project name="platform/system/ca-certificates" path="system/ca-certificates" revision="master" groups="pdk"/>
+  <project name="platform/system/chre" path="system/chre" revision="master" groups="pdk"/>
+  <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond" revision="master" groups="pdk"/>
+  <project name="platform/system/core" path="system/core" revision="master" groups="pdk"/>
+  <project name="platform/system/dmesgd" path="system/dmesgd" revision="master" groups="pdk"/>
+  <project name="platform/system/extras" path="system/extras" revision="master" groups="pdk"/>
+  <project name="platform/system/gatekeeper" path="system/gatekeeper" revision="master" groups="pdk"/>
+  <project name="platform/system/gsid" path="system/gsid" revision="master" groups="pdk"/>
+  <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces" revision="master" groups="pdk"/>
+  <project name="platform/system/hwservicemanager" path="system/hwservicemanager" revision="master" groups="pdk"/>
+  <project name="platform/system/incremental_delivery" path="system/incremental_delivery" revision="master" groups="pdk"/>
+  <project name="platform/system/iorap" path="system/iorap" revision="master" groups="pdk"/>
+  <project name="platform/system/keymaster" path="system/keymaster" revision="master" groups="pdk"/>
+  <project name="platform/system/libartpalette" path="system/libartpalette" revision="master" groups="pdk"/>
+  <project name="platform/system/libbase" path="system/libbase" revision="master" groups="pdk"/>
+  <project name="platform/system/libfmq" path="system/libfmq" revision="master" groups="pdk"/>
+  <project name="platform/system/libhidl" path="system/libhidl" revision="master" groups="pdk"/>
+  <project name="platform/system/libhwbinder" path="system/libhwbinder" revision="master" groups="pdk"/>
+  <project name="platform/system/libprocinfo" path="system/libprocinfo" revision="master" groups="pdk"/>
+  <project name="platform/system/librustutils" path="system/librustutils" revision="master" groups="pdk"/>
+  <project name="platform/system/libsysprop" path="system/libsysprop" revision="master" groups="pdk"/>
+  <project name="platform/system/libufdt" path="system/libufdt" revision="master" groups="pdk"/>
+  <project name="platform/system/libvintf" path="system/libvintf" revision="master" groups="pdk"/>
+  <project name="platform/system/libziparchive" path="system/libziparchive" revision="master" groups="pdk"/>
+  <project name="platform/system/linkerconfig" path="system/linkerconfig" revision="master" groups="pdk"/>
+  <project name="platform/system/logging" path="system/logging" revision="master" groups="pdk"/>
+  <project name="platform/system/media" path="system/media" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/libdmabufheap" path="system/memory/libdmabufheap" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/libion" path="system/memory/libion" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/libmeminfo" path="system/memory/libmeminfo" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/libmemtrack" path="system/memory/libmemtrack" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/libmemunreachable" path="system/memory/libmemunreachable" revision="master" groups="pdk"/>
+  <project name="platform/system/memory/lmkd" path="system/memory/lmkd" revision="master" groups="pdk"/>
+  <project name="platform/system/netd" path="system/netd" revision="master" groups="pdk"/>
+  <project name="platform/system/nfc" path="system/nfc" revision="master" groups="pdk"/>
+  <project name="platform/system/nvram" path="system/nvram" revision="master" groups="pdk"/>
+  <project name="platform/system/security" path="system/security" revision="master" groups="pdk"/>
+  <project name="platform/system/sepolicy" path="system/sepolicy" revision="master" groups="pdk"/>
+  <project name="platform/system/server_configurable_flags" path="system/server_configurable_flags" revision="master" groups="pdk"/>
+  <project name="platform/system/teeui" path="system/teeui" revision="master" groups="pdk"/>
+  <project name="platform/system/testing/gtest_extras" path="system/testing/gtest_extras" revision="master" groups="pdk"/>
+  <project name="platform/system/timezone" path="system/timezone" revision="master" groups="pdk"/>
+  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="master" groups="pdk"/>
+  <project name="platform/system/tools/hidl" path="system/tools/hidl" revision="master" groups="pdk"/>
+  <project name="platform/system/tools/mkbootimg" path="system/tools/mkbootimg" revision="master" groups="pdk"/>
+  <project name="platform/system/tools/release_tools" path="system/tools/release_tools" remote="rk" revision="master">
+    <copyfile src="restore_patches.sh" dest="restore_patches.sh"/>
+  </project>
+  <project name="platform/system/tools/sysprop" path="system/tools/sysprop" revision="master" groups="pdk"/>
+  <project name="platform/system/tools/xsdc" path="system/tools/xsdc" revision="master" groups="pdk"/>
+  <project name="platform/system/unwinding" path="system/unwinding" revision="master" groups="pdk"/>
+  <project name="platform/system/update_engine" path="system/update_engine" revision="master" groups="pdk"/>
+  <project name="platform/system/vold" path="system/vold" revision="master"/>
+  <project name="platform/test/app_compat/csuite" path="test/app_compat/csuite" revision="master" groups="pdk"/>
+  <project name="platform/test/catbox" path="test/catbox" revision="master"/>
+  <project name="platform/test/cts-root" path="test/cts-root" revision="master"/>
+  <project name="platform/test/framework" path="test/framework" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/test/mlts/benchmark" path="test/mlts/benchmark" revision="master" groups="pdk"/>
+  <project name="platform/test/mlts/models" path="test/mlts/models" revision="master" groups="pdk"/>
+  <project name="platform/test/mts" path="test/mts" revision="master"/>
+  <project name="platform/test/vts" path="test/vts" revision="master" groups="vts,pdk"/>
+  <project name="platform/test/vts-testcase/fuzz" path="test/vts-testcase/fuzz" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/test/vts-testcase/hal" path="test/vts-testcase/hal" revision="master" groups="vts,pdk"/>
+  <project name="platform/test/vts-testcase/hal-trace" path="test/vts-testcase/hal-trace" revision="master" groups="vts,pdk"/>
+  <project name="platform/test/vts-testcase/kernel" path="test/vts-testcase/kernel" revision="master" groups="vts,pdk"/>
+  <project name="platform/test/vts-testcase/nbu" path="test/vts-testcase/nbu" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/test/vts-testcase/performance" path="test/vts-testcase/performance" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/test/vts-testcase/security" path="test/vts-testcase/security" revision="master" groups="vts,projectarch,pdk"/>
+  <project name="platform/test/vts-testcase/vndk" path="test/vts-testcase/vndk" revision="master" groups="vts,pdk"/>
+  <project name="platform/tools/aadevtools" path="tools/aadevtools" revision="master" groups="pdk"/>
+  <project name="platform/tools/acloud" path="tools/acloud" revision="master" groups="tools,vts,projectarch,pdk,tradefed"/>
+  <project name="platform/tools/apifinder" path="tools/apifinder" revision="master" groups="pdk,tools"/>
+  <project name="platform/tools/apksig" path="tools/apksig" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/tools/apkzlib" path="tools/apkzlib" revision="master" groups="pdk,tradefed"/>
+  <project name="platform/tools/asuite" path="tools/asuite" revision="master" groups="pdk"/>
+  <project name="platform/tools/carrier_settings" path="tools/carrier_settings" revision="master" groups="tools"/>
+  <project name="platform/tools/currysrc" path="tools/currysrc" revision="master" groups="pdk"/>
+  <project name="platform/tools/dexter" path="tools/dexter" revision="master" groups="tools,pdk-fs"/>
+  <project name="platform/tools/doc_generation" path="tools/doc_generation" revision="master" groups="tools,pdk"/>
+  <project name="platform/tools/external/fat32lib" path="tools/external/fat32lib" revision="master" groups="tools"/>
+  <project name="platform/tools/external_updater" path="tools/external_updater" revision="master" groups="tools"/>
+  <project name="platform/tools/loganalysis" path="tools/loganalysis" revision="master" groups="nopresubmit,pdk,tradefed"/>
+  <project name="platform/tools/metalava" path="tools/metalava" revision="master" groups="pdk,tools"/>
+  <project name="platform/tools/ndkports" path="tools/ndkports" revision="master" groups="pdk"/>
+  <project name="platform/tools/security" path="tools/security" revision="master" groups="pdk,tools"/>
+  <project name="platform/tools/test/connectivity" path="tools/test/connectivity" revision="master" groups="pdk"/>
+  <project name="platform/tools/test/graphicsbenchmark" path="tools/test/graphicsbenchmark" revision="master" groups="pdk"/>
+  <project name="platform/tools/test/mobly_snippets" path="tools/test/mobly_snippets" revision="master" groups="pdk"/>
+  <project name="platform/tools/test/openhst" path="tools/test/openhst" revision="master" groups="tools"/>
+  <project name="platform/tools/tradefederation/prebuilts" path="tools/tradefederation/prebuilts" revision="master" groups="pdk,tradefed" clone-depth="1"/>
+  <project name="platform/tools/treble" path="tools/treble" revision="master" groups="tools,pdk"/>
+  <project name="platform/tools/trebuchet" path="tools/trebuchet" revision="master" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs"/>
+  <project name="rk/device/rockchip/rk3326" path="device/rockchip/rk3326" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rk3399" path="device/rockchip/rk3399" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rk3528" path="device/rockchip/rk3528" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rk3562" path="device/rockchip/rk3562" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rk3566" path="device/rockchip/rk356x" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rk3588" path="device/rockchip/rk3588" remote="rk" revision="master"/>
+  <project name="rk/device/rockchip/rksdk" path="device/rockchip/common" remote="rk" revision="master">
+    <copyfile src=".classpath" dest=".classpath"/>
+    <copyfile src="mkimage.sh" dest="mkimage.sh"/>
+    <copyfile src="javaenv.sh" dest="javaenv.sh"/>
+    <copyfile src="build/rockchip/build.sh" dest="build.sh"/>
+    <copyfile src="mkimage_ab.sh" dest="mkimage_ab.sh"/>
+    <copyfile src="build/rockchip/blank_file" dest="kernel-5.10/.find-ignore"/>
+  </project>
+  <project name="rk/hardware/libgralloc/bifrost" path="hardware/rockchip/libgralloc/bifrost" remote="rk" revision="master"/>
+  <project name="rk/hardware/libgralloc/midgard" path="hardware/rockchip/libgralloc/midgard" remote="rk" revision="master"/>
+  <project name="rk/hardware/libgralloc/utgard_new" path="hardware/rockchip/libgralloc/utgard" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/audio" path="hardware/rockchip/audio" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/bootctrl" path="hardware/rockchip/bootctrl" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/camera_engine_rkisp" path="hardware/rockchip/camera_engine_rkisp" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/camera_v3" path="hardware/rockchip/camera" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/camera_vir" path="hardware/rockchip/camera_vir" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/drmservice" path="hardware/rockchip/drmservice" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/fastbootd" path="hardware/rockchip/fastbootd" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/gatekeeper" path="hardware/rockchip/gatekeeper" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/hdmicec" path="hardware/rockchip/hdmicec" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/hw_output" path="hardware/rockchip/hw_output" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/hwcomposer_rga" path="hardware/rockchip/hwcomposer/drmhwc" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/keymaster4" path="hardware/rockchip/keymaster4" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/libbaseparameter" path="hardware/rockchip/libbaseparameter" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/libgraphicpolicy" path="hardware/rockchip/libgraphicpolicy" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/libhwjpeg" path="hardware/rockchip/libhwjpeg" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/libmemtrack" path="hardware/rockchip/libmemtrack" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/librkvpu" path="hardware/rockchip/librkvpu" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/lights_aidl" path="hardware/rockchip/light_aidl" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/mpi-mmz" path="hardware/rockchip/libmpimmz" remote="rk29" revision="master"/>
+  <project name="rk/hardware/rk29/optee" path="hardware/rockchip/optee" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/outputmanager" path="vendor/rockchip/hardware/interfaces/outputmanager" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/power_aidl" path="hardware/rockchip/power_aidl" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/sensor" path="hardware/rockchip/sensor" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/thermal" path="hardware/rockchip/thermal" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk29/weaver" path="hardware/rockchip/weaver" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/einkhwc" path="hardware/rockchip/hwcomposer/einkhwc" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/helper" path="hardware/rockchip/helper" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/hwcomposer2" path="hardware/rockchip/hwcomposer/drmhwc2" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/libhardware_rockchip" path="hardware/rockchip/libhardware_rockchip" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/tv_input" path="hardware/rockchip/tv_input" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/udc_set" path="hardware/rockchip/udc_set" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/usb" path="hardware/rockchip/usb" remote="rk" revision="master"/>
+  <project name="rk/hardware/rk35/vibrator_aidl" path="hardware/rockchip/vibrator_aidl" remote="rk" revision="master"/>
+  <project name="rk/hardware/rockchip/hdcp_release" path="hardware/rockchip/hdcp2" remote="rk" revision="master"/>
+  <project name="rk/kernel" path="kernel-5.10" remote="rk29" revision="master"/>
+  <project name="rk/libiep" path="hardware/rockchip/libiep" remote="rk29" revision="master"/>
+  <project name="rk/libpq-release" path="hardware/rockchip/libpq" remote="rk29" revision="master"/>
+  <project name="rk/librkcrypto" path="hardware/rockchip/librkcrypto" remote="rk29" revision="master"/>
+  <project name="rk/libsvep" path="hardware/rockchip/libsvep" remote="rk29" revision="master"/>
+  <project name="rk/libvendor_storage" path="hardware/rockchip/libvendor_storage" remote="rk29" revision="master"/>
+  <project name="rk/packages/apps/DisplayAdjust" path="packages/apps/DisplayAdjust" remote="rk" revision="master"/>
+  <project name="rk/platform/external/io" path="external/io" remote="rk" revision="master"/>
+  <project name="rk/platform/external/ntfs-3g" path="external/ntfs-3g" remote="rk" revision="master"/>
+  <project name="rk/platform/external/rk-pcba-test" path="bootable/recovery/pcba_core" remote="rk" revision="master"/>
+  <project name="rk/platform/system/rk_tee_user" path="external/rk_tee_user" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/Widevine" path="vendor/widevine" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/common" path="vendor/rockchip/common" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/hardware" path="vendor/rockchip/hardware" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/codec2" path="vendor/rockchip/hardware/interfaces/codec2" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/neuralnetworks" path="vendor/rockchip/hardware/interfaces/neuralnetworks" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/rksoundsetting" path="vendor/rockchip/hardware/interfaces/rksoundsetting" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/rockit" path="vendor/rockchip/hardware/interfaces/rockit" remote="rk" revision="master"/>
+  <project name="rk/platform/vendor/rockchip/tv_input" path="vendor/rockchip/hardware/interfaces/tv" remote="rk" revision="master"/>
+  <project name="rk/prebuilts/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu" remote="rk29" revision="master"/>
+  <project name="rk/prebuilts/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf" remote="rk29" revision="master"/>
+  <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" remote="rk29" revision="master"/>
+  <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" remote="rk29" revision="master"/>
+  <project name="rk/rkCamera2" path="packages/apps/rkCamera2" remote="rk29" revision="master"/>
+  <project name="rk/rkbin" path="rkbin" remote="rk29" revision="master"/>
+  <project name="rk/rknn-toolkit2" path="hardware/rockchip/rknn-toolkit2" remote="rk29" revision="master"/>
+  <project name="rk/rknpu2" path="hardware/rockchip/rknpu2" remote="rk29" revision="master"/>
+  <project name="rk/rkst" path="rkst" remote="rk" revision="master"/>
+  <project name="rk/u-boot" path="u-boot" remote="rk" revision="master"/>
+  <project name="toolchain/benchmark" revision="master"/>
+  <project name="toolchain/pgo-profiles" revision="master" groups="pdk"/>
+  <project name="tools/platform-compat" revision="master" groups="pdk-cw-fs,pdk-fs,pdk"/>
+  
+  <superproject name="platform/superproject" revision="master-13.0.0_r74"/>
+  
+  <contactinfo bugurl="go/repo-bug"/>
+</manifest>
