@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch="."/>
-  <remote name="rk" fetch="."/>
-  <remote name="rk29" fetch="."/>
+  <remote name="aosp" fetch=".."/>
+  <remote name="rk" fetch=".."/>
+  <remote name="rk29" fetch=".."/>
   
   <default remote="aosp" revision="master" sync-j="4"/>
   
