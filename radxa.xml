@@ -7,6 +7,7 @@
   <default remote="aosp" revision="master" sync-j="4"/>
   
   <project name="RKTools" remote="rk" revision="master"/>
+  <project name="radxa" path="radxa" revision="master"/>
   <project name="device/amlogic/yukawa" revision="master" groups="device,yukawa,pdk"/>
   <project name="device/common" revision="master" groups="pdk-cw-fs,pdk"/>
   <project name="device/generic/arm64" revision="master" groups="pdk"/>
