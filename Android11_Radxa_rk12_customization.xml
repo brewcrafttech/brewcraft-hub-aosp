@@ -19,15 +19,15 @@
 
 
   <remove-project name="rk/u-boot"/>
-  <project groups="radxa" path="u-boot" name="rk/u-boot" remote="rk" revision="1177ebfa94f77072aec7b3886cdf9ca1fded6af7" upstream="refs/tags/radxa-android11-rkr12.1"/>
+  <project groups="radxa" path="u-boot" name="rk/u-boot" remote="rk" revision="8a380f0f9511ebc1ac14d4e9a48bd86c95f1a443" upstream="refs/tags/radxa-android11-rkr12.2"/>
 
   <remove-project name="rk/kernel"/>
-  <project groups="radxa" path="kernel" name="rk/kernel" remote="rk29" revision="4b08c717600d809a2b127f843327e84216994bf3" upstream="refs/tags/radxa-android11-rkr12.1"/>
+  <project groups="radxa" path="kernel" name="rk/kernel" remote="rk29" revision="4391afad36671bc6bcc478ef22bf89b09753718f" upstream="refs/tags/radxa-android11-rkr12.2"/>
 
   <remove-project name="rk/device/rockchip/rk3566"/>
   <remove-project name="rk/device/rockchip/rk3568_box"/>
   <remove-project name="rk/device/rockchip/rk3399"/>
-  <project groups="radxa" path="device/rockchip/rk356x" name="rk/device/rockchip/rk3566" remote="rk" revision="d9ea273f631377a879e6fcd76a21cf37fedf7018" upstream="refs/tags/radxa-android11-rkr12.1"/>
+  <project groups="radxa" path="device/rockchip/rk356x" name="rk/device/rockchip/rk3566" remote="rk" revision="d4bfc34f0cdaf89c685eb2ff8f3108d5b8d84c89" upstream="refs/tags/radxa-android11-rkr12.2"/>
   <project name="rk/device/rockchip/rk3568_box" path="device/rockchip/rk356x_box" remote="rk" revision="787b8ec8e4f54d7179366f5750c13064cf56f601" upstream="refs/tags/radxa-android11-rkr12.1"/>
   <project groups="radxa" path="device/rockchip/rk3399" name="rk/device/rockchip/rk3399" remote="rk" revision="08f7818bffa84d46cc51d753a64289f54e043b62" upstream="refs/tags/radxa-android11-rkr12.1"/>
 
@@ -35,7 +35,7 @@
   <project groups="radxa" name="platform/bootable/recovery/recovery" path="bootable/recovery" remote="rk" revision="4d89581d4e5f0166e4da02f2f81a79e06f00fe6b" upstream="refs/tags/radxa-android11-rkr12.1"/>
 
   <remove-project name="rk/device/rockchip/rksdk"/>
-  <project groups="radxa" name="rk/device/rockchip/rksdk" path="device/rockchip/common" remote="rk" revision="9fe58aa9486c6fa9f316331d750a1236333f0729" upstream="refs/tags/radxa-android11-rkr12.2">
+  <project groups="radxa" name="rk/device/rockchip/rksdk" path="device/rockchip/common" remote="rk" revision="c62193f42f12484967a83eb62ce95b5321dae9e4" upstream="refs/tags/radxa-android11-rkr12.2">
     <copyfile dest=".classpath" src=".classpath"/>
     <copyfile dest="mkimage.sh" src="mkimage.sh"/>
     <copyfile dest="javaenv.sh" src="javaenv.sh"/>
@@ -68,7 +68,7 @@
   <project name="rk/platform/vendor/partner_modules" path="vendor/partner_modules" remote="rk" revision="Android11_Radxa_rk12" upstream="Android11_Radxa_rk12"/>
 
   <remove-project name="kernel/configs" />
-  <project name="kernel/configs" remote="rk" revision="837f89bc074940a1c07e73397a91643605245cc5" upstream="refs/tags/radxa-android11-rkr12.1">
+  <project name="kernel/configs" remote="rk" revision="1d41731494bfa90088efc31eb2a07f2924cdf938" upstream="refs/tags/radxa-android11-rkr12.2">
     <linkfile src="rockchip/android-11.config" dest="kernel/kernel/configs/android-11.config"/>
     <linkfile src="rockchip/android-11-go.config" dest="kernel/kernel/configs/android-11-go.config"/>
     <linkfile src="rockchip/rk3326.config" dest="kernel/kernel/configs/rk3326.config"/>
@@ -77,6 +77,7 @@
     <linkfile src="rockchip/rk356x_eink.config" dest="kernel/kernel/configs/rk356x_eink.config"/>
     <linkfile src="rockchip/rk3399.config" dest="kernel/kernel/configs/rk3399.config"/>
     <linkfile src="rockchip/rock_3b.config" dest="kernel/kernel/configs/rock_3b.config"/>
+    <linkfile src="rockchip/rock3c.config" dest="kernel/kernel/configs/rock3c.config"/>
     <linkfile src="rockchip/rockpi_4b.config" dest="kernel/kernel/configs/rockpi_4b.config"/>
     <linkfile src="rockchip/rockpi_4c.config" dest="kernel/kernel/configs/rockpi_4c.config"/>
     <linkfile src="rockchip/radxa_key_z.config" dest="kernel/kernel/configs/radxa_key_z.config"/>
