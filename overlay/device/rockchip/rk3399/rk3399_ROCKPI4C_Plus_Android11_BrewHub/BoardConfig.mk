@@ -9,9 +9,9 @@ CAMERA_SUPPORT_AUTOFOCUS:= false
 
 BOARD_CAMERA_SUPPORT := false
 BOARD_CAMERA_SUPPORT_EXT := false
-PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rockpi_4b.config
-PRODUCT_KERNEL_DTS := rk3399-rockpi-4b
-PRODUCT_UBOOT_CONFIG := rockpi4b
+PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rockpi_4c.config
+PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus
+PRODUCT_UBOOT_CONFIG := rockpi4c
 
 # AB image definition
 BOARD_USES_AB_IMAGE := false
@@ -26,4 +26,3 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
     TARGET_RECOVERY_FSTAB := device/rockchip/rk3399/rk3399_Android11/recovery.fstab_AB
 endif
-
