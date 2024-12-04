@@ -30,7 +30,7 @@ apt-get install -y python3.8-distutils
 apt-get install -y python3.8-dev
 update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 150
 apt-get install -y python3-pip
-pip install pycryptodome
+# pip install pycryptodome
 
 # Install build dependencies
 apt-get install -y openjdk-8-jdk git-core gnupg flex bison gperf build-essential \
@@ -41,10 +41,10 @@ apt-get install -y openjdk-8-jdk git-core gnupg flex bison gperf build-essential
   dosfstools vim-common parted udev libssl-dev sudo rsync python3-pyelftools cpio
 
 # Install libncurses5
-wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.4-2_amd64.deb
-dpkg -i libtinfo5_6.4-2_amd64.deb
-wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.4-2_amd64.deb
-dpkg -i libncurses5_6.4-2_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_amd64.deb
+dpkg -i libtinfo5_6.3-2_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2_amd64.deb
+dpkg -i libncurses5_6.3-2_amd64.deb
 
 # Install python 2.7
 sudo apt install -y checkinstall libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
@@ -52,7 +52,7 @@ wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
 tar -xvf Python-2.7.18.tgz
 cd Python-2.7.18
 ./configure --enable-optimizations
-make -j4 build_all
+make -j$(nproc) build_all
 make install
 cd ..
 rm -rf Python-2.7.18
@@ -68,7 +68,7 @@ cd build
 
 # Initialize the repo
 yes | repo init -u https://github.com/brewcrafttech/brewcraft-hub-aosp.git -b $BRANCH -m rockchip-r-release.xml
-repo sync -d --no-tags -j4
+repo sync -d --no-tags -j$(nproc)
 
 # Install overlay
 cp -R -v ../overlay/* ./
