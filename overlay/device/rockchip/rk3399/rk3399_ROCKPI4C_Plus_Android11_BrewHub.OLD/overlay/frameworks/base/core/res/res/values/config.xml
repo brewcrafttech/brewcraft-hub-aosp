@@ -148,7 +148,7 @@
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
 	<bool name="config_enableAutoPowerModes">true</bool>
-    <string translatable="false" name="config_ntpServer">asia.pool.ntp.org</string>
+    <string translatable="false" name="config_ntpServer">us.pool.ntp.org</string>
     <!-- Device configuration indicating whether we should avoid using accelerated graphics
             in certain places to reduce RAM footprint.  This is ignored if ro.config.low_ram
             is true (in that case this is assumed true as well).  It can allow you to tune down
@@ -158,5 +158,5 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_showNavigationBar">false</bool>
 </resources>

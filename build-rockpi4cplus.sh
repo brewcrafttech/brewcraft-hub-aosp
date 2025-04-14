@@ -2,6 +2,7 @@
 
 ########################################################################################################################
 ## This builds for RockPi 4C+ ONLY!!!
+## Ubuntu 24.04 LTS
 ########################################################################################################################
 
 BRANCH=BrewHub_Rock4B
@@ -30,7 +31,7 @@ apt-get install -y python3.8-distutils
 apt-get install -y python3.8-dev
 update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 150
 apt-get install -y python3-pip
-# pip install pycryptodome
+pip install pycryptodome
 
 # Install build dependencies
 apt-get install -y openjdk-8-jdk git-core gnupg flex bison gperf build-essential \

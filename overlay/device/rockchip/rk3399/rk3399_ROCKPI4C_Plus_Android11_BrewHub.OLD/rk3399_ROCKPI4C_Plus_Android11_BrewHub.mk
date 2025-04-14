@@ -30,9 +30,9 @@ PRODUCT_CHARACTERISTICS := box
 
 PRODUCT_NAME := rk3399_ROCKPI4C_Plus_Android11_BrewHub
 PRODUCT_DEVICE := rk3399_ROCKPI4C_Plus_Android11_BrewHub
-PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3399-Android11
-PRODUCT_MANUFACTURER := rockchip
+PRODUCT_BRAND := brewcraft.tech
+PRODUCT_MODEL := brew-hub-1
+PRODUCT_MANUFACTURER := brewcraft.tech
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
@@ -48,6 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version = 1.0.0 \
     ro.product.ota.host = 192.168.1.1:8888 \
     ro.sf.lcd_density=280 \
-    vendor.hwc.device.primary=HDMI-A \
-    vendor.hwc.device.extend=DP \
+    vendor.hwc.device.primary=DSI \
+    vendor.hwc.device.extend=HDMI-A \
     persist.vendor.framebuffer.main=1920x1080@60 \
+    persist.sys.root_access=3 \
