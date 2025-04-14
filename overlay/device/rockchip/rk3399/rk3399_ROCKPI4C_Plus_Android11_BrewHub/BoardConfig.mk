@@ -10,7 +10,9 @@ CAMERA_SUPPORT_AUTOFOCUS:= false
 BOARD_CAMERA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rockpi_4c.config
-PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus
+#PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus
+#PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-mipi
+PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-mipi_JD9365DA-H3_BOE8.0_IPS_800x1280
 PRODUCT_UBOOT_CONFIG := rockpi4c
 
 # AB image definition
@@ -18,9 +20,9 @@ BOARD_USES_AB_IMAGE := false
 BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
 BOARD_HAS_RK_4G_MODEM := false
 
-BUILD_WITH_GOOGLE_MARKET := true
-BUILD_WITH_GOOGLE_GMS_EXPRESS := true
-BUILD_WITH_GOOGLE_MARKET_ALL := true
+BUILD_WITH_GOOGLE_MARKET := false
+BUILD_WITH_GOOGLE_GMS_EXPRESS := false
+BUILD_WITH_GOOGLE_MARKET_ALL := false
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
