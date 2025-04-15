@@ -45,10 +45,10 @@ PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
 PRODUCT_COPY_FILES += device/rockchip/common/usb_otg.sh:vendor/bin/usb_otg.sh 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.version = 1.0.0 \
-    ro.product.ota.host = 192.168.1.1:8888 \
+    ro.product.version=1.0.0 \
+    ro.product.ota.host=192.168.1.1:8888 \
     ro.sf.lcd_density=280 \
-    # ro.sf.hwrotation 90
+    # ro.sf.hwrotation=90
     vendor.hwc.device.primary=DSI \
     vendor.hwc.device.extend=HDMI-A \
     persist.vendor.framebuffer.main=800x1280@60 \
