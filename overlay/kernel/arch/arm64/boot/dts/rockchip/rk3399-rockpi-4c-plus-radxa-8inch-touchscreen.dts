@@ -358,7 +358,7 @@
 &hdmi {
 	pinctrl-names = "default";
 	pinctrl-0 = <&hdmi_i2c_xfer>, <&hdmi_cec>;
-	status = "okay";
+	status = "disabled";
 	rockchip,phy-table =
 		<74250000 0x8009 0x0004 0x0272>,
 		<165000000 0x802b 0x0004 0x0209>,
@@ -632,11 +632,11 @@
 };
 
 &hdmi_in_vopb {
-	status = "okay";
+	status = "disabled";
 };
 
 &route_hdmi {
-	status = "okay";
+	status = "disabled";
 };
 
 &route_dsi {
@@ -1392,9 +1392,9 @@
 	status = "disabled";
 };
 
-/*&uart4 {
+&uart4 {
 	status = "okay";
-}; */
+};
 
 &usb_host0_ehci {
 	status = "okay";

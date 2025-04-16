@@ -51,5 +51,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwrotation=270 \
     vendor.hwc.device.primary=DSI \
     persist.vendor.framebuffer.main=800x1280@60 \
-
-    # vendor.hwc.device.extend=HDMI-A
+    ro.rk.screenoff_time=-1 \
