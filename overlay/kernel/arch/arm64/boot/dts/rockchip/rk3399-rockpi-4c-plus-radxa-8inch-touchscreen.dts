@@ -643,7 +643,8 @@
 
 &route_dsi {
 	status = "okay";
-	connect = <&vopl_out_dsi>;
+	//connect = <&vopl_out_dsi>;
+	connect = <&vopb_out_dsi>;
 };
 
 &dp_in_vopb {
@@ -668,6 +669,7 @@
 
 &dsi_in_vopl {
     status = "disabled";
+	//status = "okay";
 	//remote-endpoint = <&vopl_out_dsi>;
 };
 
