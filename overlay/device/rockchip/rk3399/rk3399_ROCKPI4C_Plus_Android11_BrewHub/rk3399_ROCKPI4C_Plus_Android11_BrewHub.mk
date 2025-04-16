@@ -52,3 +52,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.hwc.device.primary=DSI \
     persist.vendor.framebuffer.main=800x1280@60 \
     ro.rk.screenoff_time=-1 \
+    ro.rk.hdmi_enable=false \
+    ro.vendor.hdmi_settings=false \
