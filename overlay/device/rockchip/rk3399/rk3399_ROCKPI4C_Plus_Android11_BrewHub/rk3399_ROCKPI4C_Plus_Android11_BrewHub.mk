@@ -54,3 +54,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.rk.screenoff_time=-1 \
     ro.rk.hdmi_enable=false \
     ro.vendor.hdmi_settings=false \
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.product.version=1.0.0 \
+    ro.product.ota.host=192.168.1.1:8888 \
+    ro.sf.lcd_density=280 \
+    ro.sf.hwrotation=270 \
+    vendor.hwc.device.primary=DSI \
+    persist.vendor.framebuffer.main=800x1280@60 \
+    ro.rk.screenoff_time=-1 \
+    ro.rk.hdmi_enable=false \
+    ro.vendor.hdmi_settings=false \
