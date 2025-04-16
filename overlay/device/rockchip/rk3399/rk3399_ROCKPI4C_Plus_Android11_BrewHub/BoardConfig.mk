@@ -11,9 +11,9 @@ BOARD_CAMERA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rockpi_4c.config
 #PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus
-#PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-mipi
+PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-mipi
 #PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-mipi_JD9365DA-H3_BOE8.0_IPS_800x1280
-PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-CZ101074032_FHD-mipi
+#PRODUCT_KERNEL_DTS := rk3399-rockpi-4c-plus-CZ101074032_FHD-mipi
 PRODUCT_UBOOT_CONFIG := rockpi4c
 
 # AB image definition
