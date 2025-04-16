@@ -9,7 +9,7 @@ BRANCH=BrewHub_Rock4B
 LUNCH=rk3399_ROCKPI4C_Plus_Android11_BrewHub-userdebug
 UBOOT_TARGET=rockpi4c
 KERNEL_CONFIG=rockpi_4c.config
-KERNEL_IMAGE=rk3399-rockpi-4c.img
+KERNEL_DTB_IMAGE=rk3399-rockpi-4c-plus-mipi_JD9365DA-H3_BOE8.0_IPS_800x1280.img
 AOSP_IMAGE=Image-rk3399_ROCKPI4C_Plus_Android11_BrewHub
 
 ########################################################################################################################
@@ -87,7 +87,7 @@ cd kernel
 export ADDON_ARGS="CC=../prebuilts/clang/host/linux-x86/clang-r383902b/bin/clang LD=../prebuilts/clang/host/linux-x86/clang-r383902b/bin/ld.lld"
 make clean
 make $ADDON_ARGS ARCH=arm64 rockchip_defconfig android-11.config $KERNEL_CONFIG
-make $ADDON_ARGS ARCH=arm64 $KERNEL_IMAGE -j$(nproc)
+make $ADDON_ARGS ARCH=arm64 $KERNEL_DTB_IMAGE -j$(nproc)
 cd ..
 
 # Build AOSP
