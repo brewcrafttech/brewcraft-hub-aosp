@@ -91,6 +91,7 @@ make $ADDON_ARGS ARCH=arm64 $KERNEL_DTB_IMAGE -j$(nproc)
 cd ..
 
 # Build AOSP
+rm -rf ./out/target/product/rk3399_ROCKPI4C_Plus_Android11_BrewHub
 source build/envsetup.sh
 lunch $LUNCH
 make -j$(nproc)
