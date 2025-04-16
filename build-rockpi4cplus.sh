@@ -9,7 +9,7 @@ BRANCH=BrewHub_Rock4B
 LUNCH=rk3399_ROCKPI4C_Plus_Android11_BrewHub-userdebug
 UBOOT_TARGET=rockpi4c
 KERNEL_CONFIG=rockpi_4c.config
-KERNEL_DTB_IMAGE=rk3399-rockpi-4c-plus-mipi_JD9365DA-H3_BOE8.0_IPS_800x1280.img
+KERNEL_DTB_IMAGE=rk3399-rockpi-4c-plus-radxa-8inch-touchscreen.img
 AOSP_IMAGE=Image-rk3399_ROCKPI4C_Plus_Android11_BrewHub
 
 ########################################################################################################################
