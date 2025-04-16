@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+SF_PRIMARY_DISPLAY_ORIENTATION := 270
+
 # First lunching is R, api_level is 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
