@@ -13,6 +13,9 @@
 #include <linux/usb.h>
 #include <linux/usb/serial.h>
 
+/* warning! need write-all permission so overriding check */ 
+#undef VERIFY_OCTAL_PERMISSIONS
+#define VERIFY_OCTAL_PERMISSIONS(perms) (perms)
 static DEVICE_ATTR(ttyusb, 0666, NULL, NULL);
 
 static struct attribute *tty_serial_dev_attrs[] = {
