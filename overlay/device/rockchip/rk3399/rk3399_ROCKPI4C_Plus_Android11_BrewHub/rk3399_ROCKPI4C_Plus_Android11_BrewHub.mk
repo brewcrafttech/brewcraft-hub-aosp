@@ -46,6 +46,7 @@ PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/screen_always_on_overlay
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
 PRODUCT_COPY_FILES += device/rockchip/common/usb_otg.sh:vendor/bin/usb_otg.sh 
+PRODUCT_COPY_FILES += device/rockchip/common/tty_perms.sh:vendor/bin/tty_perms.sh 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version=1.0.0 \
     ro.product.ota.host=192.168.1.1:8888 \
@@ -67,3 +68,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.rk.screenoff_time=-1 \
     ro.rk.hdmi_enable=false \
     ro.vendor.hdmi_settings=false \
+
+# TODO
+# Need to add these to /system/etc/ueventd.rc:
+# /dev/ttyS4                0666   root       root
+# /dev/ttyUSB*              0666   root       root
